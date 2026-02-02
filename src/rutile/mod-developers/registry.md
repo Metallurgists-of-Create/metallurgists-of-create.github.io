@@ -12,8 +12,6 @@ With Rutile you can register two new types of object: Elements and Materials.
 ## Elements
 Elements are cosmetic informative objects that display in the tooltips of supported objects.
 
-![Crude Titanium Tetrachloride](src/public/assets/examples/element_tooltip.png)
-
 Elements are defined with an id, symbol, and color.<br>
 The color of the element is used for tinting the Element in JEI. It can also be used to change the color of the composition tooltip if the `elementColorForTooltip` config value is `true`<br>
 The symbol of the element is used for the composition tooltip and is never localized.
