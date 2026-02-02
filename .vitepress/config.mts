@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import rutile from "./sidebars/rutile";
+import chemica from "./sidebars/chemica";
 
 
 // https://vitepress.dev/reference/site-config
@@ -30,7 +31,8 @@ export default defineConfig({
 
 
     sidebar: {
-        ...rutile
+        ...rutile,
+        ...chemica
     },
 
     socialLinks: [

@@ -13,12 +13,16 @@ hero:
 
 features:
   - title: Rutile
-    details: API for easy material registry using flags.
+    details: "Our API for easy material registry using flags."
     link: ./rutile
     linkText: Read More
   - title: Metallurgica
-    details: "Realistic ore and mineral processing powered by Create: The Factory Must Grow"
+    details: "Realistic ore and mineral processing."
     link: ./metallurgica
+    linkText: Read More
+  - title: Chemica
+    details: "Real-world chemistry and industrial processes."
+    link: ./chemica
     linkText: Read More
 ---
 
