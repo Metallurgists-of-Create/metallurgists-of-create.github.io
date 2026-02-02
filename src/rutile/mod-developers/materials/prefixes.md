@@ -19,6 +19,7 @@ Since they are registered objects, unlike FlagKeys, they use a ResourceLocation.
 ## Creating a new instance.
 
 ```java
+// Create a class to hold your prefixes
 public class MyTagPrefixes {
 
     // Creates and registers a Prefix that generates a "dust" item if the Material has the DUST flag.
@@ -30,6 +31,20 @@ public class MyTagPrefixes {
             .generateItem(true)
             .generationCondition(hasFlag(MyFlagKeys.DUST));
 
+    public static void init() {}
+}
+//Call init during the RegisterEvent to ensure the registration of your prefixes
+
+@SubscribeEvent
+public static void onRegister(RegisterEvent event) {
+    if (didRunRegistration) {
+        return;
+    }
+    MyElements.init();
+    MyMaterials.init();
+    // Initialize your Prefixes:
+    MyTagPrefixes.init();
+    didRunRegistration = true;
 }
 ```
 

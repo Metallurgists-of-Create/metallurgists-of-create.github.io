@@ -17,6 +17,7 @@ export default {
                                 { text: 'Creating Your First Material', link: '/rutile/mod-developers/materials/first-material' },
                                 { text: 'Adding Flags', link: '/rutile/mod-developers/materials/flags' },
                                 { text: 'Creating Prefixes', link: '/rutile/mod-developers/materials/prefixes' },
+                                { text: 'Modifying Materials', link: '/rutile/mod-developers/materials/modifying' },
                         ]}
                     ]
                 },
