@@ -27,7 +27,7 @@ Release jars of Rutile...
 
 ### Development Environment Dependency
 
-This type of dependency is added to the Gradle buildscript so that Gradle and your IDE can find Create"s code.
+This type of dependency is added to the Gradle buildscript so that Gradle and your IDE can find Rutile's code.
 
 #### Configuration
 

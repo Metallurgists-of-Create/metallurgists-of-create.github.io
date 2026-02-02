@@ -15,6 +15,8 @@ export default {
                         { text: 'Registering Your Objects', link: '/rutile/mod-developers/registry'},
                         { text: 'Materials', collapsed: true, link: '/rutile/mod-developers/materials', items: [
                                 { text: 'Creating Your First Material', link: '/rutile/mod-developers/materials/first-material' },
+                                { text: 'Adding Flags', link: '/rutile/mod-developers/materials/flags' },
+                                { text: 'Creating Prefixes', link: '/rutile/mod-developers/materials/prefixes' },
                         ]}
                     ]
                 },
