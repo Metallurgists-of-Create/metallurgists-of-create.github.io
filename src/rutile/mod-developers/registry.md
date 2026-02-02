@@ -28,4 +28,4 @@ The symbol of the element is used for the composition tooltip and is never local
 ```
 
 ## Materials
-
+Materials are quite a bit more complicated than Elements. The next section should cover everything you need to know about how to create your own.

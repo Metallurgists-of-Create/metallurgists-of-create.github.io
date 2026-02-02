@@ -2,11 +2,13 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+lastUpdated: false
+
 hero:
   name: "Metallurgists of Create"
   tagline: "Realistic ore and mineral processing"
   image:
-    src: /assets/org-icon-large.webp
+    src: /assets/rutile-icon-small.webp
     alt: Org Icon
 
 features:

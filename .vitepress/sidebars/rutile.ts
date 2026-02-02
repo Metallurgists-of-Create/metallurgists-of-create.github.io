@@ -13,6 +13,9 @@ export default {
                         { text: 'Depending on Rutile', link: '/rutile/mod-developers/depending'},
                         { text: 'Creating the Plugin', link: '/rutile/mod-developers/plugin'},
                         { text: 'Registering Your Objects', link: '/rutile/mod-developers/registry'},
+                        { text: 'Materials', collapsed: true, link: '/rutile/mod-developers/materials', items: [
+                                { text: 'Creating Your First Material', link: '/rutile/mod-developers/materials/first-material' },
+                        ]}
                     ]
                 },
                 {
