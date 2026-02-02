@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: "src",
   
   title: "Metallurgists of Create",
-  description: "Realistic ore and mineral processing",
+  description: "Bringing realism to Minecraft. One mod at a time.",
 
   head: [["link", { rel: "icon", href: "/assets/rutile-icon-small.webp" }]],
 
@@ -36,7 +36,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Metallurgists-of-Create' }
     ]
   }
 })

@@ -6,10 +6,10 @@ lastUpdated: false
 
 hero:
   name: "Metallurgists of Create"
-  tagline: "Realistic ore and mineral processing"
+  tagline: "Bringing realism to Minecraft. One mod at a time."
   image:
-    src: /assets/rutile-icon-small.webp
-    alt: Org Icon
+    src: /assets/rutile-icon-large.webp
+    alt: Rutile Icon
 
 features:
   - title: Rutile
