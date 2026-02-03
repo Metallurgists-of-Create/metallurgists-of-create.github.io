@@ -7,6 +7,10 @@ export default {
             link: '/metallurgica/',
             items: [
                 {
+                    text: 'Metallurgica\'s Materials',
+                    link: '/metallurgica/materials/index',
+                },
+                {
                     text: 'For Users',
                     link: '/metallurgica/users/index',
                     collapsed: true,

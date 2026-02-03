@@ -6,7 +6,7 @@ prev:
 next: false
 #next:
 #    text: Text
-#    link: /metallurgica/next
+#    link: /metallurgica/materials/index
 ---
 
 # Getting Started
