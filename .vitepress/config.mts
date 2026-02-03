@@ -8,6 +8,8 @@ import chemica from "./sidebars/chemica";
 export default defineConfig({
   lastUpdated: true,
   srcDir: "src",
+
+  ignoreDeadLinks: true,
   
   title: "Metallurgists of Create",
   description: "Bringing realism to Minecraft. One mod at a time.",
