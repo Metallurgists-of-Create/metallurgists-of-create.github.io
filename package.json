@@ -9,5 +9,8 @@
     "docs:preview": "vitepress preview",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "datatables.net-dt": "^2.3.7"
   }
 }

@@ -1,5 +1,5 @@
 ---
-rutile_version: v2.0.0-mc1.21.1
+rutile_version: v2.1.0-mc1.21.1
 registrate_version: MC1.21-1.3.0+67
 minecraft_version: 1.21.1
 
@@ -13,24 +13,24 @@ next:
 ::: code-group
 ```groovy [build.gradle]
     repositories {
-        maven { url = "https://jitpack.io" } // Rutile
+        maven { url = "https://api.modrinth.com/maven" } // Rutile
         maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
     }
 
     dependencies {
         implementation("com.tterrag.registrate:Registrate:${registrate_version}")
-        implementation("com.github.Metallurgists-of-Create:Rutile:${rutile_version}")
+        implementation("maven.modrinth:rutile:${rutile_version}")
     }
 ```
 ```kotlin [build.gradle.kts]
     repositories {
-        maven("https://jitpack.io") // Rutile
+        maven("https://api.modrinth.com/maven") // Rutile
         maven("https://maven.ithundxr.dev/snapshots") // Registrate
     }
 
     dependencies {
         implementation("com.tterrag.registrate:Registrate:${property("registrate_version")}")
-        implementation("com.github.Metallurgists-of-Create:Rutile:${property("rutile_version")}")
+        implementation("maven.modrinth:rutile:${property("rutile_version")}")
     }
 ```
 

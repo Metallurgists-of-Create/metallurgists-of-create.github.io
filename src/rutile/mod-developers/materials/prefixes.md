@@ -87,5 +87,9 @@ Rutile has multiple builtin Prefixes that it uses for its builtin Materials. The
 
 - `Ingot` Generates an Ingot for your Material. Enabled with `FlagKey.INGOT`.
 - `Gem` Generates a Gem for your Material. Enabled with `FlagKey.GEM`.
+- `Dust` Generates an Ingot for your Material. Enabled with `FlagKey.DUST`.
 - `Nugget` Generates a Nugget for your Material. Enabled with `FlagKey.INGOT`.
 - `Block` Generates a Storage Block for your Material. Enabled with `FlagKey.INGOT` OR `FlagKey.GEM`.
+- `RawOre` Generates a Raw Ore for your Material. Enabled with `FlagKey.ORE` WITHOUT `FlagKey.GEM`.
+- `RawOreBlock` Generates a Raw Ore Block for your Material. Enabled with `FlagKey.ORE` WITHOUT `FlagKey.GEM`.
+
