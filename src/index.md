@@ -16,6 +16,10 @@ features:
     details: "Our API for easy material registry using flags."
     link: ./rutile
     linkText: Read More
+  - title: Hematite
+    details: "Our API for a naturally changing world."
+    link: ./hematite
+    linkText: Read More
   - title: Metallurgica
     details: "Realistic ore and mineral processing."
     link: ./metallurgica
