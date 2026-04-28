@@ -1,6 +1,6 @@
 ---
 prev: 
-    text: Chemica
+    text: Metallurgica
     link: /metallurgica/index
 
 next: false
