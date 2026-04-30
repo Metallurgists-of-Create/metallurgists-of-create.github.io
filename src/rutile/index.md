@@ -7,6 +7,10 @@ next: false
 
 hero:
     features:
+        - title: For Users
+          details: Information for players.
+          link: ./rutile/users
+          linkText: Read More
         - title: For Mod Developers
           details: How to implement Rutile into your modding projects.
           link: ./rutile/mod-developers
