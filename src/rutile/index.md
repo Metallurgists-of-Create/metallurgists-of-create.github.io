@@ -1,29 +1,30 @@
 ---
-title: Rutile
-description: API for easy material registry using flags.
+layout: home
 
-prev: false
-next: false
+lastUpdated: false
 
 hero:
-    features:
-        - title: For Users
-          details: Information for players.
-          link: ./rutile/users
-          linkText: Read More
-        - title: For Mod Developers
-          details: How to implement Rutile into your modding projects.
-          link: ./rutile/mod-developers
-          linkText: Read More
-        - title: For Pack Developers
-          details: How to modify Rutile for your modpack.
-          link: ./rutile/pack-developers
-          linkText: Read More
+  name: "Rutile"
+  tagline: "API for easy material registry using flags."
+  image:
+    src: /assets/rutile-icon-large.webp
+    alt: Rutile Icon
+
+
+features:
+  - title: For Users
+    details: "Information for players."
+    link: ./users/materials
+    linkText: Read More
+  - title: For Mod Developers
+    details: "How to implement Rutile into your modding projects."
+    link: ./mod-developers/depending
+    linkText: Read More
+  - title: For Pack Developers
+    details: "How to modify Rutile for your modpack."
+    link: ./pack-developers/kubejs
+    linkText: Read More
 ---
-
-# Rutile {#rutile}
-
-API for easy material registry using flags.
 
 # About
 

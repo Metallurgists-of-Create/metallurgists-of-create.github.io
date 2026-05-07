@@ -1,29 +1,29 @@
 ---
-title: Hematite
-description: "Our API for a naturally changing world"
+layout: home
 
-prev: false
-next: false
+lastUpdated: false
 
 hero:
-  features:
-    - title: For Users
-      details: Information for players.
-      link: ./hematite/users
-      linkText: Read More
-    - title: For Mod Developers
-      details: How to implement Hematite into your modding projects.
-      link: ./hematite/mod-developers
-      linkText: Read More
-    - title: For Pack Developers
-      details: How to modify Hematite for your modpack.
-      link: ./hematite/pack-developers
-      linkText: Read More
+  name: "Hematite"
+  tagline: "Our API for a naturally changing world."
+  image:
+    src: /assets/rutile-icon-large.webp
+    alt: Rutile Icon
+
+features:
+  - title: For Users
+    details: Information for players.
+    link: ./users/index
+    linkText: Read More
+  - title: For Mod Developers
+    details: How to implement Hematite into your modding projects.
+    link: ./mod-developers/depending
+    linkText: Read More
+  - title: For Pack Developers
+    details: How to modify Hematite for your modpack.
+    link: ./pack-developers/kubejs
+    linkText: Read More
 ---
-
-# Hematite {#hematite}
-
-Our API for a naturally changing world.
 
 # About
 
