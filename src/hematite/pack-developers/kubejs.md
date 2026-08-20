@@ -6,11 +6,11 @@ prev:
 next:
     text: Tick Sources
     link: /hematite/pack-developers/tick_source
----
 
-<meta property="og:title" content="Hematite" />
-<meta property="og:description" content="KubeJS Integration" />
-<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+title: Hematite
+description: KubeJS Integration
+image: https://metallurgists-of-create.github.io/assets/empty-icon-large.webp
+---
 
 # KubeJS Integration
 

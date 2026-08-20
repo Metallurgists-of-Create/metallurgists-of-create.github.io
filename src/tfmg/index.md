@@ -3,6 +3,10 @@ layout: home
 
 lastUpdated: false
 
+title: "Create: TFMG"
+description: Heavy Engineering & Oil For The Create Mod.
+image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
+
 hero:
   name: "Create: TFMG"
   tagline: "Heavy Engineering & Oil For The Create Mod."
@@ -25,10 +29,6 @@ features:
     link: ./pack-developers/datapack
     linkText: Read More
 ---
-
-<meta property="og:title" content="Create: TFMG" />
-<meta property="og:description" content="Heavy Engineering & Oil For The Create Mod." />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
 
 # About
 

@@ -3,6 +3,10 @@ layout: home
 
 lastUpdated: false
 
+title: Hematite
+description: Our API for a naturally changing world.
+image: https://metallurgists-of-create.github.io/assets/empty-icon-large.webp
+
 hero:
   name: "Hematite"
   tagline: "Our API for a naturally changing world."
@@ -24,10 +28,6 @@ features:
     link: ./pack-developers/kubejs
     linkText: Read More
 ---
-
-<meta property="og:title" content="Hematite" />
-<meta property="og:description" content="Our API for a naturally changing world." />
-<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
 
 # About
 

@@ -4,11 +4,11 @@ prev:
     link: /rutile/mod-developers/materials/prefixes
     
 next: false
----
 
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="Modifying Materials" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+title: Rutile
+description: Modifying Materials
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+---
 
 # Modifying Materials
 

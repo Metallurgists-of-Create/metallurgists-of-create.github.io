@@ -4,11 +4,11 @@ prev:
     link: /tfmg
 
 next: false
----
 
-<meta property="og:title" content="Create: TFMG" />
-<meta property="og:description" content="Datapack Registries" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+title: "Create: TFMG"
+description: Datapack Registries
+image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
+---
 
 # Datapack Registries
 

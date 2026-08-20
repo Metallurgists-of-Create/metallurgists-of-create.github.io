@@ -4,11 +4,11 @@ prev:
     link: /tfmg/mod-developers/depending
     
 next: false
----
 
-<meta property="og:title" content="Create: TFMG" />
-<meta property="og:description" content="Registering Your Objects" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+title: "Create: TFMG"
+description: Registering Your Objects
+image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
+---
 
 # Registering Your Objects
 

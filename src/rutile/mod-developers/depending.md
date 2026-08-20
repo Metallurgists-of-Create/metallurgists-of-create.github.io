@@ -10,11 +10,11 @@ prev:
 next: 
     text: Creating the Plugin
     link: /rutile/mod-developers/plugin
----
 
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="Depending on Rutile" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+title: Rutile
+description: Depending on Rutile
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+---
 
 <!--@include: ./template.md-->
 

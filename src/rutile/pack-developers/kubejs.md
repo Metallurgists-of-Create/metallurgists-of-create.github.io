@@ -4,11 +4,11 @@ prev:
     link: /rutile
 
 next: false
----
 
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="KubeJS Integration" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+title: Rutile
+description: KubeJS Integration
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+---
 
 # KubeJS Integration
 

@@ -2,11 +2,11 @@
 prev:
     text: KubeJS
     link: /hematite/kubejs
----
 
-<meta property="og:title" content="Hematite" />
-<meta property="og:description" content="Tick Sources" />
-<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+title: Hematite
+description: Tick Sources
+image: https://metallurgists-of-create.github.io/assets/empty-icon-large.webp
+---
 
 # Tick Sources
 

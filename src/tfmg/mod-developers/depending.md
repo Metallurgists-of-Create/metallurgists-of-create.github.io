@@ -9,11 +9,11 @@ prev:
 next: 
   text: Registering Your Objects
   link: /tfmg/mod-developers/registry
----
 
-<meta property="og:title" content="Create: TFMG" />
-<meta property="og:description" content="Depending on TFMG" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+title: "Create: TFMG"
+description: Depending on TFMG
+image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
+---
 
 <!--@include: ./template.md-->
 

@@ -3,6 +3,10 @@ layout: home
 
 lastUpdated: false
 
+title: Rutile
+description: API for easy material registry using flags.
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+
 hero:
   name: "Rutile"
   tagline: "API for easy material registry using flags."
@@ -25,10 +29,6 @@ features:
     link: ./pack-developers/kubejs
     linkText: Read More
 ---
-
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="API for easy material registry using flags." />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
 
 # About
 

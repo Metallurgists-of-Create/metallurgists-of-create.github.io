@@ -9,11 +9,11 @@ prev:
 next: 
     text: Registries
     link: /hematite/mod-developers/registries
----
 
-<meta property="og:title" content="Hematite" />
-<meta property="og:description" content="Depending on Hematite" />
-<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+title: Hematite
+description: Depending on Hematite
+image: https://metallurgists-of-create.github.io/assets/empty-icon-large.webp
+---
 
 <!--@include: ./template.md-->
 

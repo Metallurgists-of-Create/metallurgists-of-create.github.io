@@ -2,11 +2,11 @@
 prev: 
     text: Creating the Plugin
     link: /rutile/mod-developers/plugin
----
 
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="Registering Your Objects" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+title: Rutile
+description: Registering Your Objects
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+---
 
 # Registering Your Objects
 

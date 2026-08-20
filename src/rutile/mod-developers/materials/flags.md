@@ -6,11 +6,11 @@ prev:
 next:
     text: Creating Prefixes
     link: /rutile/mod-developers/materials/prefixes
----
 
-<meta property="og:title" content="Rutile" />
-<meta property="og:description" content="Adding Flags" />
-<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+title: Rutile
+description: Adding Flags
+image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+---
 
 # Adding Flags
 
