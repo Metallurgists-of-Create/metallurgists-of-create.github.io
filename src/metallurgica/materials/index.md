@@ -6,6 +6,10 @@ prev:
 next: false
 ---
 
+<meta property="og:title" content="Metallurgica" />
+<meta property="og:description" content="Metallurgica's Materials" />
+<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+
 # Metallurgica's Materials
 
 TODO: Add links to pages

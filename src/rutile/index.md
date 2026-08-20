@@ -26,6 +26,10 @@ features:
     linkText: Read More
 ---
 
+<meta property="og:title" content="Rutile" />
+<meta property="og:description" content="API for easy material registry using flags." />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
+
 # About
 
 Rutile is an API that works similarly to how GregTech registers Materials but in a more standalone and expandable manner.

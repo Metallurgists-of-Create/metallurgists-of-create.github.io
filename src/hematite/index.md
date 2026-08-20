@@ -25,6 +25,10 @@ features:
     linkText: Read More
 ---
 
+<meta property="og:title" content="Hematite" />
+<meta property="og:description" content="Our API for a naturally changing world." />
+<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+
 # About
 
 Hematite is a forked and updated version of Immersive Weathering's various systems designed to be compatible with any block and allow for even more datapack customisation.

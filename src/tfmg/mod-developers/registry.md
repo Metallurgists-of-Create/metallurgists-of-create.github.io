@@ -6,6 +6,10 @@ prev:
 next: false
 ---
 
+<meta property="og:title" content="Create: TFMG" />
+<meta property="og:description" content="Registering Your Objects" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+
 # Registering Your Objects
 
 The Community Edition of TFMG adds many new registries that you can use to add content that integrates with our systems.

@@ -1,5 +1,4 @@
 ---
-
 prev: 
     text: Depending on Rutile
     link: /rutile/mod-developers/depending
@@ -8,6 +7,10 @@ next:
     text: Registering Your Objects
     link: /rutile/mod-developers/registry
 ---
+
+<meta property="og:title" content="Rutile" />
+<meta property="og:description" content="Creating the Plugin" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
 
 # Creating the Plugin
 

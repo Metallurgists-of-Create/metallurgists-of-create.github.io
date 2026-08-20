@@ -6,6 +6,10 @@ prev:
 next: false
 ---
 
+<meta property="og:title" content="Create: TFMG" />
+<meta property="og:description" content="Datapack Registries" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+
 # Datapack Registries
 
 The Community Edition of TFMG adds some new datapack registries, mostly related to fuel but that's besides the point.

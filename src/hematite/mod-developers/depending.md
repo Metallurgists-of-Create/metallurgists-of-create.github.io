@@ -11,6 +11,10 @@ next:
     link: /hematite/mod-developers/registries
 ---
 
+<meta property="og:title" content="Hematite" />
+<meta property="og:description" content="Depending on Hematite" />
+<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+
 <!--@include: ./template.md-->
 
 ::: code-group

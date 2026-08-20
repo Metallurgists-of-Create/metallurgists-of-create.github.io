@@ -1,5 +1,4 @@
 ---
-
 prev:
     text: Registering Your Objects
     link: /rutile/mod-developers/registry
@@ -8,6 +7,10 @@ next:
     text: Creating Your First Material
     link: /rutile/mod-developers/materials/first-material
 ---
+
+<meta property="og:title" content="Rutile" />
+<meta property="og:description" content="Materials" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
 
 # Materials
 

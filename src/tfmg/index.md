@@ -26,6 +26,10 @@ features:
     linkText: Read More
 ---
 
+<meta property="og:title" content="Create: TFMG" />
+<meta property="og:description" content="Heavy Engineering & Oil For The Create Mod." />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp" />
+
 # About
 
 Create is by default a steam/clockpunk mod and most addons aim to expand this part of Create and do that pretty

@@ -1,5 +1,4 @@
 ---
-
 prev: 
     text: Adding Flags
     link: /rutile/mod-developers/materials/flags
@@ -8,6 +7,10 @@ next:
     text: Modifying Materials
     link: /rutile/mod-developers/materials/modifying
 ---
+
+<meta property="og:title" content="Rutile" />
+<meta property="og:description" content="Creating Prefixes" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
 
 # Creating Prefixes
 

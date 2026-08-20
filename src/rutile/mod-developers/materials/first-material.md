@@ -1,5 +1,4 @@
 ---
-
 prev: 
     text: Materials
     link: /rutile/mod-developers/materials/index
@@ -8,6 +7,10 @@ next:
     text: Adding Flags
     link: /rutile/mod-developers/materials/flags
 ---
+
+<meta property="og:title" content="Rutile" />
+<meta property="og:description" content="Creating Your First Material" />
+<meta property="og:image" content="https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp" />
 
 # Creating Your First Material
 

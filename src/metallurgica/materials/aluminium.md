@@ -7,4 +7,8 @@ boiling_point: 2470
 moh_scale: 2.75
 ---
 
+<meta property="og:title" content="Metallurgica" />
+<meta property="og:description" content="Aluminium" />
+<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+
 <!--@include: ./template.md-->

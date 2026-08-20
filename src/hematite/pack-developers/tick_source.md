@@ -4,6 +4,10 @@ prev:
     link: /hematite/kubejs
 ---
 
+<meta property="og:title" content="Hematite" />
+<meta property="og:description" content="Tick Sources" />
+<meta property="og:image" content=https://metallurgists-of-create.github.io/assets/empty-icon-large.webp" />
+
 # Tick Sources
 
 Hematite adds a registry for "Tick Sources". They have no properties and are used as a way to determine the origins of a tick. Block Growths utilise Tick Sources to restrict the growth to certain conditions.
