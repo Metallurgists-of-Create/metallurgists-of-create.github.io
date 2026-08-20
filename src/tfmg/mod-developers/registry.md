@@ -45,7 +45,7 @@ public class ArcElectrode extends Electrode {
 ## Mixer Modes
 Similar to Electrodes, Mixer Modes are used as types for the Industrial Mixer vat attachment.
 
-To link an electrode to an item you must use the `tfmg:electrode` item component.
+To link a mixer mode to an item you must use the `tfmg:mixer_mode` item component.
 
 Once again, TFMG has a pre-made Registrate builder for Mixer Modes!
 ```java
@@ -81,3 +81,6 @@ public static final EngineTypeEntry<EngineType> WAOW = REGISTRATE.engineType("wa
             .register();
 ```
 Worth noting that `pistons()` is a list of `PistonPosition` so it might be best to keep them separate from the constructor. A good example is TFMG's `EngineProperties` class.
+
+## Cable Types
+I'll do this later :/
