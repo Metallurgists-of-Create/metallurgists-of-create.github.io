@@ -1,7 +1,7 @@
 ---
-prev: 
-    text: Metallurgica
-    link: /metallurgica/index
+prev:
+  text: Home
+  link: /metallurgica/
 
 next: false
 #next:

@@ -3,6 +3,10 @@ rutile_version: 2.1.0-mc1.21.1
 registrate_version: MC1.21-1.3.0+67
 minecraft_version: 1.21.1
 
+prev:
+  text: Rutile
+  link: /rutile
+  
 next: 
     text: Creating the Plugin
     link: /rutile/mod-developers/plugin

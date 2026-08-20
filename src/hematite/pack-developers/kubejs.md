@@ -1,7 +1,8 @@
 ---
 prev:
-    text: Hematite
-    link: /hematite
+  text: Home
+  link: /hematite/
+  
 next:
     text: Tick Sources
     link: /hematite/pack-developers/tick_source

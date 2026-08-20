@@ -1,5 +1,7 @@
 ---
-prev: false
+prev:
+  text: Home
+  link: /metallurgica/
 
 next: false
 ---

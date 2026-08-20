@@ -2,6 +2,8 @@
 prev:
     text: Rutile
     link: /rutile
+
+next: false
 ---
 
 # KubeJS Integration

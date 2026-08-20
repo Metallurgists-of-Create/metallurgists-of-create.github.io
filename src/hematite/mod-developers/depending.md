@@ -2,6 +2,10 @@
 hematite_version: N/A
 minecraft_version: 1.21.1
 
+prev:
+  text: Home
+  link: /hematite/
+  
 next: 
     text: Registries
     link: /hematite/mod-developers/registries

@@ -20,6 +20,10 @@ features:
     details: "Our API for a naturally changing world."
     link: ./hematite
     linkText: Read More
+  - title: "Create: TFMG"
+    details: "Heavy Engineering & Oil For The Create Mod."
+    link: ./tfmg
+    linkText: Read More
   - title: Metallurgica
     details: "Realistic ore and mineral processing."
     link: ./metallurgica
