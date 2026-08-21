@@ -14,7 +14,8 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 
 # Datapack Registries
 
-For KubeJS, see [KubeJS Integration](https://metallurgists-of-create.github.io/tfmg/pack-developers/kubejs) <p>
+For KubeJS, see [KubeJS Integration](https://metallurgists-of-create.github.io/tfmg/pack-developers/kubejs)
+
 The Community Edition of TFMG adds some new datapack registries, mostly related to fuel but that's besides the point.
 
 ## Engine Fuel
