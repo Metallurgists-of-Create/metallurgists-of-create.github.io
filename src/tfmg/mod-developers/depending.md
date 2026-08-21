@@ -1,5 +1,5 @@
 ---
-tfmg_version: 1.2.3a-community
+tfmg_version: 1.2.4-community
 minecraft_version: 1.21.1
 
 prev:
