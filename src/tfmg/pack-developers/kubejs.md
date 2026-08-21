@@ -143,7 +143,7 @@ Information:
   - Graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
   - Centrifuge can be added by doing `.machines("tfmg:centrifuge")`
   - Mixing can be added by doing `.machines("tfmg:mixing")`
-  - Electrode can be added by doing `.machines("electrode")`
+  - Electrode can be added by doing `.machines("tfmg:electrode")`
   - Note: you can "mix-and-match" them by doing (for example): `.machines("tfmg:mixing", "tfmg:electrode")`
   - Note: to note, use any machine; you do not need to use this method at all.
 - Chemical vat types to make the results can have:
