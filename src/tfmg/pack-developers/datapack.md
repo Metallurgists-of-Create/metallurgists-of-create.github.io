@@ -3,7 +3,9 @@ prev:
     text: TFMG
     link: /tfmg
 
-next: false
+next:
+    text: KubeJS Integration
+    link: /tfmg/pack-developers/kubejs
 
 title: "Create: TFMG"
 description: Datapack Registries
