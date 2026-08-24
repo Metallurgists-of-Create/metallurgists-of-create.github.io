@@ -1,5 +1,5 @@
 ---
-tfmg_version: 1.2.4-community
+tfmg_version: 1.2.4b-community
 minecraft_version: 1.21.1
 
 prev:
@@ -19,22 +19,28 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 
 ::: code-group
 ```groovy [build.gradle]
-    repositories {
-        maven { url = "https://api.modrinth.com/maven" } // TFMG
+repositories {
+    maven {
+        name "Krystals Maven"
+        url "https://krystalsmaven.oreostack.uk/snapshots" // TFMG
     }
+}
 
-    dependencies {
-        implementation("maven.modrinth:tfmg-community-edition:${tfmg_version}")
-    }
+dependencies {
+    implementation("com.drmangotea:tfmg:${minecraft_version}-${tfmg_version}")
+}
 ```
 ```kotlin [build.gradle.kts]
-    repositories {
-        maven("https://api.modrinth.com/maven") // TFMG
+repositories {
+    maven {
+        name = "Krystals Maven"
+        url = uri("https://krystalsmaven.oreostack.uk/snapshots") // TFMG
     }
+}
 
-    dependencies {
-        implementation("maven.modrinth:tfmg-community-edition:${property("tfmg_version")}")
-    }
+dependencies {
+    implementation("com.drmangotea:tfmg:${property("minecraft_version")}-${property("tfmg_version")}")
+}
 ```
 
 :::
@@ -43,6 +49,7 @@ And in your `gradle.properties` file:
 
 ```properties-vue [gradle.properties]
 tfmg_version = {{ $frontmatter.tfmg_version }}
+minecraft_version = {{ $frontmatter.minecraft_version }}
 ```
 
 ### Production Environment Dependency
