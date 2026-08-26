@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "datatables.net-dt": "^2.3.7"
+  },
+  "allowScripts": {
+    "esbuild@0.27.2": true
   }
 }
