@@ -14,6 +14,22 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 
 The Community Edition of TFMG adds many new registries that you can use to add content that integrates with our systems.
 
+## Vat Operation
+Vat Operations is a simple registry. It holds identification for various VAT machines. 
+
+For all machines that interact with a VAT, it must have a Vat Operation attached to it.
+
+TFMG has a pre-made Registrate builder for Vat Operations which makes registering them even easier!
+
+```java
+public class MyVatOperations {
+    public static final VatOperationEntry ELECTRODE = REGISTRATE.vatOperation("electrode", VatOperation::new).register();
+    public static final VatOperationEntry BIG_SPOON = REGISTRATE.vatOperation("big_spoon", VatOperation::new).register();
+
+    public static void init() { }
+}
+```
+
 ## Electrodes
 Electrodes are a simple registry. They define how the electrode renders in the Vat and what operation it should act under.
 
@@ -24,7 +40,7 @@ TFMG has a pre-made Registrate builder for Electrodes which makes registering th
 ```java
 public class MyElectrodes {
     public static final ElectrodeEntry<Electrode> platinum = REGISTRATE.electrode("platinum", Electrode::new)
-            .properties((p) -> p.resistance(69).operationId(MyMod.asResource("electrode")))
+            .properties((p) -> p.resistance(69).operationId(MyVatOperations.ELECTRODE))
             .register();
 
     public static void init() { }
@@ -34,7 +50,7 @@ If you want to further customise the Electrode you can look at how ArcElectrode 
 ```java
 public class ArcElectrode extends Electrode {
     public ArcElectrode(Properties properties) {
-        super(properties.operationId(TFMG.asResource("graphite_electrode")));
+        super(properties.operationId(TFMGVatOperations.GRAPHITE_ELECTRODE));
     }
 
     @Override
@@ -55,7 +71,7 @@ Once again, TFMG has a pre-made Registrate builder for Mixer Modes!
 ```java
 public class MyMixerModes {
     public static final MixerModeEntry<MixerMode> bigSpoon = REGISTRATE.mixerMode("big_spoon", MixerMode::new)
-            .properties((p) -> p.operation(MyMod.asResource("big_spoon")).partial((currentHeight, totalHeight, be) -> TFMGPartialModels.SMALL_CENTRIFUGE_ALONE))
+            .properties((p) -> p.operation(MyVatOperations.BIG_SPOON).partial((currentHeight, totalHeight, be) -> TFMGPartialModels.SMALL_CENTRIFUGE_ALONE))
             .register();
 
     public static void init() { }
