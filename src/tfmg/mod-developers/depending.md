@@ -1,6 +1,7 @@
 ---
-tfmg_version: 1.2.4b-community
+tfmg_version: 1.2.5-community
 minecraft_version: 1.21.1
+next_minor_version: 1.3.0
 
 prev:
   text: TFMG
@@ -68,7 +69,7 @@ If TFMG is not present or is outdated, NeoForge will display an error screen exp
 [[dependencies.${mod_id}]]
     modId="tfmg"
     type="required"
-    versionRange="[{{ tfmg_version }},{{ next_minor_version }})"
+    versionRange="[{{ $frontmatter.tfmg_version }},{{ $frontmatter.next_minor_version }})"
     ordering="NONE"
     side="BOTH"
 ```
