@@ -1,5 +1,5 @@
 ---
-rutile_version: 2.1.0-mc1.21.1
+rutile_version: 2.0.0
 registrate_version: MC1.21-1.3.0+67
 minecraft_version: 1.21.1
 
@@ -21,24 +21,30 @@ image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
 ::: code-group
 ```groovy [build.gradle]
     repositories {
-        maven { url = "https://api.modrinth.com/maven" } // Rutile
+        maven {
+            name "Krystals Maven"
+            url "https://krystalsmaven.oreostack.uk/releases" // Rutile
+        }
         maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
     }
 
     dependencies {
         implementation("com.tterrag.registrate:Registrate:${registrate_version}")
-        implementation("maven.modrinth:rutile:${rutile_version}")
+        implementation("dev.metallurgists:rutile:${minecraft_version}-${rutile_version}")
     }
 ```
 ```kotlin [build.gradle.kts]
     repositories {
-        maven("https://api.modrinth.com/maven") // Rutile
+        maven {
+            name = "Krystals Maven"
+            url = uri("https://krystalsmaven.oreostack.uk/releases") // Rutile
+        }
         maven("https://maven.ithundxr.dev/snapshots") // Registrate
     }
 
     dependencies {
         implementation("com.tterrag.registrate:Registrate:${property("registrate_version")}")
-        implementation("maven.modrinth:rutile:${property("rutile_version")}")
+        implementation("dev.metallurgists:rutile:${property("minecraft_version")}-${property("rutile_version")}")
     }
 ```
 
@@ -68,7 +74,7 @@ If Rutile is not present or is outdated, NeoForge will display an error screen e
 [[dependencies.${mod_id}]]
     modId="rutile"
     type="required"
-    versionRange="[{{ rutile_version_no_build_number }},{{ next_minor_version }})"
+    versionRange="[{{ $frontmatter.rutile_version }},)"
     ordering="NONE"
     side="BOTH"
 ```
