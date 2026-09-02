@@ -1,5 +1,5 @@
 ---
-rutile_version: 2.0.0
+rutile_version: 2.0.1
 registrate_version: MC1.21-1.3.0+67
 minecraft_version: 1.21.1
 
