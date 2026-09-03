@@ -32,6 +32,8 @@ features:
 
 # About
 
+Read the [FAQ](https://metallurgists-of-create.github.io/tfmg/users/ce-faq)!
+
 Create is by default a steam/clockpunk mod and most addons aim to expand this part of Create and do that pretty
 well, we thought the next natural expansion would be moving on from steampunk to dieselpunk. We believe that 
 create could be later used not just as a single steampunk tech mod, but due to its modularity and polishedness it is 
