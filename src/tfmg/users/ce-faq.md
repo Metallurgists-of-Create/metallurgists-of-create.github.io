@@ -22,7 +22,7 @@ The official version of TFMG **is not abandoned**. DrMangoTea is aware of the CE
 We are **strongly against** the use of AI and will **never** use it to develop any part of the CE, be that code, text or assets.
 
 ### Will I lose anything if I load an old world with this fork?
-We use the **same namespace** so you can load a world from the official version and (*hopefully*)**nothing will be lost**.
+We use the **same namespace** so you can load a world from the official version and (*hopefully*) **nothing will be lost**.
 
 ### What happens about the data storage changing on some things?
 We **safely remap** any old data/items/blocks if they have changed.
