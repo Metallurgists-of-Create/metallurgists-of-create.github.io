@@ -25,6 +25,7 @@ repositories {
         name "Krystals Maven"
         url "https://krystalsmaven.oreostack.uk/snapshots" // TFMG
     }
+    maven { url = "https://maven.ryanhcode.dev/releases" } // Sable Companion
 }
 
 dependencies {
@@ -37,6 +38,7 @@ repositories {
         name = "Krystals Maven"
         url = uri("https://krystalsmaven.oreostack.uk/snapshots") // TFMG
     }
+    maven("https://maven.ryanhcode.dev/releases") // Sable Companion
 }
 
 dependencies {
