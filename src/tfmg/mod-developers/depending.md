@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.drmangotea:tfmg:${minecraft_version}-${tfmg_version}")
+    implementation("com.drmangotea:tfmg:${minecraft_version}-${tfmg_version}") { transitive = false }
 }
 ```
 ```kotlin [build.gradle.kts]
@@ -42,7 +42,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.drmangotea:tfmg:${property("minecraft_version")}-${property("tfmg_version")}")
+    implementation("com.drmangotea:tfmg:${property("minecraft_version")}-${property("tfmg_version")}") { isTransitive = false }
 }
 ```
 
