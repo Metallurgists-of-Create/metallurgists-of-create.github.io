@@ -11,7 +11,7 @@ export default defineConfig({
 
   ignoreDeadLinks: true,
   cleanUrls: true,
-  
+
   title: "Metallurgists of Create",
   description: "Bringing realism to Minecraft. One mod at a time.",
 
@@ -43,5 +43,15 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Metallurgists-of-Create' }
     ]
+  },
+
+  async transformHead(context) {
+    if (context.page === 'index.md') {
+      return [[
+        'meta',
+        { name: 'google-site-verification', content: "oXUWquHpTOq3hyo1dSWwlhXA8XtiYumn4QgpYMseIGY" }
+      ]]
+    }
+    return
   }
 })
