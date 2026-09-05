@@ -16,7 +16,7 @@ The Metallurgists of Create are strongly against the usage of Generative AI in c
 We consider our projects works of art and have precautions in place to prevent people utilising our work to train AI models.
 
 ## Our Licence
-All of our projects are licenced under [MIT NON-AI](https://metallurgists-of-create.github.io/about-us/licence), a licence that we will not hesitate to enforce.
+All of our projects are licenced under [MIT NON-AI](/about-us/licence), a licence that we will not hesitate to enforce.
 It forbids any of our repositories to be used in training any AI or LLM and forbids any modification of our work to be assisted via the use of AI.
 
 If you do decide to fork our work and are found using AI to generate code in that fork we will not hesitate to issue a DMCA to take it down.
