@@ -12,6 +12,10 @@ hero:
     alt: Rutile Icon
 
 features:
+  - title: About Us
+    details: "Informative Stuff"
+    link: ./about-us
+    linkText: Read More
   - title: Rutile
     details: "Our API for easy material registry using flags."
     link: ./rutile

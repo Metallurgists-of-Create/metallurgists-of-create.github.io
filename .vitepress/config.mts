@@ -10,6 +10,7 @@ export default defineConfig({
   srcDir: "src",
 
   ignoreDeadLinks: true,
+  cleanUrls: true,
   
   title: "Metallurgists of Create",
   description: "Bringing realism to Minecraft. One mod at a time.",
