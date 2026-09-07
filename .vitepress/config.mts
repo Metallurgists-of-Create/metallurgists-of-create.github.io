@@ -45,6 +45,10 @@ export default defineConfig({
     ]
   },
 
+  sitemap: {
+    hostname: 'https://metallurgists-of-create.github.io'
+  },
+
   async transformHead(context) {
     if (context.page === 'index.md') {
       return [[
