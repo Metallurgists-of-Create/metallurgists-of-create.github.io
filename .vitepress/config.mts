@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import rutile from "./sidebars/rutile";
 import metallurgica from "./sidebars/metallurgica";
 import chemica from "./sidebars/chemica";
+import tfmg from "./sidebars/tfmg";
 
 
 // https://vitepress.dev/reference/site-config
@@ -37,7 +38,8 @@ export default defineConfig({
     sidebar: {
         ...rutile,
         ...metallurgica,
-        ...chemica
+        ...chemica,
+        ...tfmg
     },
 
     socialLinks: [
