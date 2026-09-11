@@ -18,7 +18,8 @@ While TFMG does not currently have native KubeJS integration, it is supported th
 > The example scripts provided are only here to demonstrate the recipes and are just examples.
 > All recipes not given a processing time will default to `100` ticks!
 
-# Casting
+# Recipes
+## Casting
 Syntax: `casting(fluidIngredient, itemOutput[], processingTime)`
 
 Information:
@@ -32,7 +33,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Coking
+## Coking
 Syntax: `coking(itemIngredient, [itemOutput | fluidOutput], processingTime)`
 
 Information:
@@ -47,7 +48,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Distillation
+## Distillation
 Syntax: `distillation(fluidIngredient, fluidOutput[])`
 
 Information:
@@ -62,7 +63,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Industrial Blasting
+## Industrial Blasting
 Syntax: `industrial_blasting(itemIngredient[], fluidOutput[], processingTime)`
 
 Information:
@@ -76,7 +77,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Polarizing
+## Polarizing
 Syntax: `polarizing(itemIngredient, itemOutput, energyNeeded)`
 
 Information:
@@ -90,7 +91,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Winding
+## Winding
 Syntax: `winding(itemIngredients[], itemOutput, processingTime)`
 
 Information:
@@ -105,7 +106,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Hot Blasting (aka Air Blasting)
+## Hot Blasting (aka Air Blasting)
 Syntax: `hot_blast(fluidIngredient[], fluidOutput[], processingTime)`
 
 Information:
@@ -120,7 +121,7 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Chemical Vat
+## Chemical Vat
 Syntax:
 ```js
 vat_machine_recipe([itemIngredient | fluidIngredient], [itemOutput | fluidOutput], machines[]?, vatTypes[]?, minSize?, processingTime?, heatRequirement?)
@@ -140,41 +141,43 @@ Information:
   - Heated vat can be added by attaching `.heated()`
   - Superheated vat can be added by attaching `.superheated()`
 - Machines to make the results can have:
+  - To see all vat operations (machines), see [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
   - Graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
+    - For **arc blasting**, there would be three graphite electrodes. Example: `.machines("tfmg:graphite_electrode", "tfmg:graphite_electrode", "tfmg:graphite_electrode")`
   - Centrifuge can be added by doing `.machines("tfmg:centrifuge")`
   - Mixing can be added by doing `.machines("tfmg:mixing")`
   - Electrode can be added by doing `.machines("tfmg:electrode")`
-  - Note: you can "mix-and-match" them by doing (for example): `.machines("tfmg:mixing", "tfmg:electrode")`
-  - Note: to note, use any machine; you do not need to use this method at all.
+    - For electrolysis or similar recipes, you would do `.machines("tfmg:electrode", "tfmg:electrode")`
 - Chemical vat types to make the results can have:
-  - Steel vat by adding `.allowedVatTypes("tfmg:steel_vat")`
-  - Cast Iron vat by adding `.allowedVatTypes("tfmg:cast_iron_vat")`
-  - Firebrick Lined vat by adding `.allowedVatTypes("tfmg:firebrick_lined_vat")`
-    - Note: you can "mix-and-match" them by doing (for example): `.allowedVatTypes("tfmg:steel_vat", "tfmg:cast_iron_vat")`
-    - Note: to allow all vat types, you can do the following instead: `.allowAllVatTypes()`
+  - To see all of TFMGs built-in vats, see [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
+  - Steel vat by adding `.allowedVatTypes("tfmg:steel")`
+  - Cast Iron vat by adding `.allowedVatTypes("tfmg:cast_iron")`
+  - Firebrick Lined vat by adding `.allowedVatTypes("tfmg:fireproof")`
+    - Note: you can "mix-and-match" them by doing (for example): `.allowedVatTypes("tfmg:steel", "tfmg:cast_iron")`
+    - Note: By default, when no vat types are present, TFMG will accept any vat type to be used
 - You can set the minimum size of the vat by attaching `.minSize(int)` (replace int with the min size)
   - Note: If the method is not provided, it will default to a min size of 1
 - To set the processing time, attach the method `.processingTime(int)` (replace the int with the processing time in ticks)
 - The output also supports items with a chance of being made with `Item.of("item here").withChance(chance here)` (Chance is from a 0-1 scale)
+
+> [!NOTE]
+> To add more machines (for example, requiring 3 electrodes), you add more into the "machines" method. (Example: `.machines("tfmg:electrode", "tfmg:electrode", "tfmg:electrode")`)
 
 Example:
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.vat_machine_recipe("minecraft:dirt", "minecraft:diamond")
     .superheated() // Makes the vat require superheating
-    .allowedVatTypes("tfmg:firebrick_lined_vat") // It's super hot, so we should use the firebrick vat for some realism
+    .allowedVatTypes("tfmg:fireproof") // It's super hot, so we should use the firebrick vat for some realism
     .processingTime(500) // Takes 500 ticks to make dirt to diamonds
 
+  // This recipe can be used in any vat type
   event.recipes.tfmg.vat_machine_recipe(["tfmg:sulfuric_acid", "tfmg:hot_air", "minecraft:water"], ["minecraft:lava", "minecraft:mud"])
     .heated() // Make this recipe use basic heating
-    .allowAllVatTypes() // Does not matter on the vat type we use, so we allow the three TFMG vat types
     .machines("tfmg:mixing") // Make it where you have to have a mixer machine on top of the vat
     .processingTime(250) // Takes 250 ticks to make the ingredients into lava and mud
 })
 ```
 
-> [!NOTE]
-> To add more machines (for example, requiring 3 electrodes), you add more into the "machines" method. (Example: `[js].machines("tfmg:electrode", "tfmg:electrode", "tfmg:electrode")`)
-
-# Custom Cable types and Electrodes
+# Custom Cable Types and Electrodes
 **WORK IN PROGRESS**
