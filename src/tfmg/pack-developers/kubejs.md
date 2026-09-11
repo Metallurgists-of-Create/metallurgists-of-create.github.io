@@ -143,11 +143,11 @@ Information:
 - Machines to make the results can have:
   - To see all vat operations (machines), see [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
   - Graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
-    - For **arc blasting**, there would be three graphite electrodes. Example: `.machines("tfmg:graphite_electrode", "tfmg:graphite_electrode", "tfmg:graphite_electrode")`
+    - For **arc blasting**, there would be three graphite electrodes. Example: `.machines("3x tfmg:graphite_electrode")`
   - Centrifuge can be added by doing `.machines("tfmg:centrifuge")`
   - Mixing can be added by doing `.machines("tfmg:mixing")`
   - Electrode can be added by doing `.machines("tfmg:electrode")`
-    - For electrolysis or similar recipes, you would do `.machines("tfmg:electrode", "tfmg:electrode")`
+    - For electrolysis or similar recipes, you would do `.machines("2x tfmg:electrode")`
 - Chemical vat types to make the results can have:
   - To see all of TFMGs built-in vats, see [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
   - Steel vat by adding `.allowedVatTypes("tfmg:steel")`
@@ -161,7 +161,7 @@ Information:
 - The output also supports items with a chance of being made with `Item.of("item here").withChance(chance here)` (Chance is from a 0-1 scale)
 
 > [!NOTE]
-> To add more machines (for example, requiring 3 electrodes), you add more into the "machines" method. (Example: `.machines("tfmg:electrode", "tfmg:electrode", "tfmg:electrode")`)
+> To add more machines (for example, requiring 3 electrodes), you add more into the "machines" method. (Example: `.machine ("3x tfmg:electrode")`)
 
 Example:
 ```js
