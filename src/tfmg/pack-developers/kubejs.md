@@ -179,5 +179,45 @@ ServerEvents.recipes(event => {
 })
 ```
 
-# Custom Cable Types and Electrodes
-**WORK IN PROGRESS**
+# Registration
+## Vat Operations
+Vat Operations, also known as "machines" in recipes, tell chemical vats what "machines" to use.
+
+```js
+StartupEvents.registry("tfmg:vat_operation", event => {.
+    // This will create kubejs:evil_mixing
+    event.create("evil_mixing");
+})
+```
+
+## Mixer Modes
+
+### Registation
+
+> [!NOTE]
+> Due to how Rhino (Javascript interpeter) works, you can't do `IndustrialMixerModels.getCentrifugeModel`.
+> You need to have an arrow function in order for partial models to function. This may be a Rhino bug.
+
+To see all `IndustrialMixerModels`, see [here](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/content/machinery/vat/industrial_mixer/IndustrialMixerModels.java)
+
+```js
+StartupEvents.registry("tfmg:mixer_mode", event => {
+    // Creates a mixer mode of kubejs:evil_mixing
+    event.create("evil_mixing")
+        .properties(p => p
+          // You must set an operation as it will default to tfmg:none
+          // This will use the vat operation kubejs:evil_mixing
+          .operation("evil_mixing")
+
+          // Partial, also known as Partial Models, are the models that would render inside the vat
+          // Due to the above note, and until that's fixed, you would need to do the following:
+          .partial((ch, th, be) => IndustrialMixerModels.getCentrifugeModel(ch, th, be)))
+
+        // This function can also be a list of items (example: ["minecraft:deepslate", "minecraft:apple"])
+        // This tells TFMG what items can be used for this mixer mode
+        .accepts("minecraft:dirt");
+})
+```
+
+### Custom Models
+To be implemented
