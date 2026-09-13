@@ -46,8 +46,27 @@ export default {
                                     ]
                                 },
                                 {
-                                    text: 'Custom Cable Types and Electrodes',
-                                    link: '/tfmg/pack-developers/kubejs#custom-cable-types-and-electrodes'
+                                    text: 'Registration',
+                                    link: '/tfmg/pack-developers/kubejs#registration',
+                                    collapsed: true,
+                                    items: [
+                                        { text: 'Vat Operations', link: '/tfmg/pack-developers/kubejs#vat-operations' },
+                                        {
+                                            text: 'Mixer Modes',
+                                            link: '/tfmg/pack-developers/kubejs#mixer-modes',
+                                            collapsed: true,
+                                            items: [
+                                                {
+                                                    text: 'Registration',
+                                                    link: '/tfmg/pack-developers/kubejs#registering-mixer-modes'
+                                                },
+                                                {
+                                                    text: 'Custom Models',
+                                                    link: '/tfmg/pack-developers/kubejs#custom-mixer-models'
+                                                }
+                                            ]
+                                        },
+                                    ]
                                 }
                             ]
                         }
