@@ -1,7 +1,7 @@
 ---
-tfmg_version: 1.2.5-community
+tfmg_version: 1.3.0-community
 minecraft_version: 1.21.1
-next_minor_version: 1.3.0
+next_minor_version: 1.4.0
 
 prev:
   text: TFMG
