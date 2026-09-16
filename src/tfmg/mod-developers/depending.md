@@ -1,5 +1,5 @@
 ---
-tfmg_version: 1.3.0-community
+tfmg_version: 1.3.1-community
 minecraft_version: 1.21.1
 next_minor_version: 1.4.0
 
@@ -23,7 +23,7 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 repositories {
     maven {
         name "Krystals Maven"
-        url "https://krystalsmaven.oreostack.uk/snapshots" // TFMG
+        url "https://krystalsmaven.oreostack.uk/releases" // TFMG
     }
     maven { url = "https://maven.ryanhcode.dev/releases" } // Sable Companion
 }
@@ -36,7 +36,7 @@ dependencies {
 repositories {
     maven {
         name = "Krystals Maven"
-        url = uri("https://krystalsmaven.oreostack.uk/snapshots") // TFMG
+        url = uri("https://krystalsmaven.oreostack.uk/releases") // TFMG
     }
     maven("https://maven.ryanhcode.dev/releases") // Sable Companion
 }
