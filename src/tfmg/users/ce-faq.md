@@ -50,6 +50,8 @@ Marked incompatible since 1.2.5. The plastic casting recipe has been fixed since
 ### TFMG: Fix engine controller
 Marked incompatible since 1.2.5. The Engine Controller **no-longer exists** and thus, this mod would not be able to fix the Engine Controller. Status won't be changed.
 
-
 ### TFMG Optimizer (Create: The Factory Must Grow Optimizer)
 Marked incompatible since 1.2.5 due to **overlapping bug fixes**. Status likely won't be changed.
+
+### TFMG Electricity Performance Patch
+Marked incompatible since 1.3.1 due to **overlapping bug fixes**. Status likely won't be changed.
