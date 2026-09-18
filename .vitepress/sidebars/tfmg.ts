@@ -24,7 +24,25 @@ export default {
                     text: 'For Pack Developers',
                     collapsed: true,
                     items: [
-                        { text: 'Datapack', link: '/tfmg/pack-developers/datapack' },
+                        {
+                            text: 'Datapacks',
+                            link: '/tfmg/pack-developers/datapack',
+                            collapsed: true,
+                            items: [
+                                {
+                                    text: 'Engine Fuels',
+                                    link: '/tfmg/pack-developers/datapack/engine-fuel'
+                                },
+                                {
+                                    text: 'Flamethrower Fuels',
+                                    link: '/tfmg/pack-developers/datapack/flamethrower-fuel'
+                                },
+                                {
+                                    text: 'Fire Extinguisher Fuels',
+                                    link: '/tfmg/pack-developers/datapack/fire-extinguisher-fuel'
+                                }
+                            ]
+                        },
                         {
                             text: 'KubeJS',
                             link: '/tfmg/pack-developers/kubejs',
