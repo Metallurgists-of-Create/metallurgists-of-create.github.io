@@ -136,13 +136,15 @@ Information:
 - Fluid output cannot have more than 4 fluid outputs
 - Chemical vats can be heated by doing the following:
   - Heatless recipes do not need this method attached
-  - Heated vat can be added by attaching `.heated()`
-  - Superheated vat can be added by attaching `.superheated()`
+  - `.heatLevel(int)`: This can be any positive integer
+- Chemical vats can also be given a pressure requirement:
+  - Pressureless recipes do not need this method attached
+  - `.pressure(int)`: This can be a positive or negative integer
 - Machines to make the results can have:
   - To see all vat operations (machines), see [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
-  - Graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
+  - A graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
     - For **arc blasting**, there would be three graphite electrodes. Example: `.machines("3x tfmg:graphite_electrode")`
-  - Centrifuge can be added by doing `.machines("tfmg:centrifuge")`
+  - A centrifuge can be added by doing `.machines("tfmg:centrifuge")`
   - Mixing can be added by doing `.machines("tfmg:mixing")`
   - Electrode can be added by doing `.machines("tfmg:electrode")`
     - For electrolysis or similar recipes, you would do `.machines("2x tfmg:electrode")`
@@ -150,7 +152,7 @@ Information:
   - To see all of TFMGs built-in vats, see [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
   - Steel vat by adding `.allowedVatTypes("tfmg:steel")`
   - Cast Iron vat by adding `.allowedVatTypes("tfmg:cast_iron")`
-  - Firebrick Lined vat by adding `.allowedVatTypes("tfmg:fireproof")`
+  - Firebrick-lined vat by adding `.allowedVatTypes("tfmg:fireproof")`
     - Note: you can "mix-and-match" them by doing (for example): `.allowedVatTypes("tfmg:steel", "tfmg:cast_iron")`
     - Note: By default, when no vat types are present, TFMG will accept any vat type to be used
 - You can set the minimum size of the vat by attaching `.minSize(int)` (replace int with the min size)
