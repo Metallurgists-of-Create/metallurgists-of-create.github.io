@@ -12,8 +12,6 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 
 # KubeJS Integration
 
-While TFMG does not currently have native KubeJS integration, it is supported through the [KubeJS TFMG](https://modrinth.com/mod/kubejs-tfmg) addon.
-
 > [!NOTE]
 > The example scripts provided are only here to demonstrate the recipes and are just examples.
 > All recipes not given a processing time will default to `100` ticks!
@@ -176,65 +174,5 @@ ServerEvents.recipes(event => {
     .heated() // Make this recipe use basic heating
     .machines("tfmg:mixing") // Make it where you have to have a mixer machine on top of the vat
     .processingTime(250) // Takes 250 ticks to make the ingredients into lava and mud
-})
-```
-
-# Registration
-## Vat Operations
-Vat Operations, also known as "machines" in recipes, tell chemical vats what "machines" to use.
-
-```js
-StartupEvents.registry("tfmg:vat_operation", event => {.
-    // This will create kubejs:evil_mixing
-    event.create("evil_mixing");
-})
-```
-
-## Mixer Modes
-
-### Registration
-
-> [!NOTE]
-> Due to how Rhino (JavaScript interpreter) works, you can't do `IndustrialMixerModels.getCentrifugeModel`.
-> You need to have an arrow function in order for partial models to function. This may be a Rhino bug.
-
-To see all `IndustrialMixerModels`, see [here](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/content/machinery/vat/industrial_mixer/IndustrialMixerModels.java)
-
-```js
-StartupEvents.registry("tfmg:mixer_mode", event => {
-    // Creates a mixer mode of kubejs:evil_mixing
-    event.create("evil_mixing")
-        .properties(p => p
-          // You must set an operation as it will default to tfmg:none
-          // This will use the vat operation kubejs:evil_mixing
-          .operation("evil_mixing")
-
-          // Partial, also known as Partial Models, are the models that would render inside the vat
-          // Due to the above note, and until that's fixed, you would need to do the following:
-          .partial((ch, th, be) => IndustrialMixerModels.getCentrifugeModel(ch, th, be)))
-
-        // This function can also be a list of items (example: ["minecraft:deepslate", "minecraft:apple"])
-        // This tells TFMG what items can be used for this mixer mode
-        .accepts("minecraft:dirt");
-})
-```
-
-### Custom Models
-> [!NOTE]
-> A dedicated event will be created to make creating custom Partial Models and built-in Partial Models easier.
-> The following script is a temporary solution until a dedicated event is added
-
-To see all of TFMG's Partial Models, see [here](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGPartialModels.java)
-
-```js
-.partial((ch, th, be) => {
-// "ch" is "Current Height"; it is an int
-// "th" is "Total Height"; it is an int
-// "be" is "Block Entity"; it is an IndustrialMixerBlockEntity
-
-// Here is an example:
-// For each level of height, the model will be a mixer shaft.
-// See IndustrialMixerModels for examples
-return TFMGPartialModels.MIXER_SHAFT
 })
 ```
