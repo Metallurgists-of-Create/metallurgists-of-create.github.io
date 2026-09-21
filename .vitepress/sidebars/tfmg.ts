@@ -10,14 +10,17 @@ export default {
                     text: 'For Users',
                     collapsed: true,
                     items: [
-                        { text: 'Getting Started', link: '/tfmg/users/getting-started' }
+                        { text: 'Welcome', link: '/tfmg/users/' },
+                        { text: 'Getting Started', link: '/tfmg/users/getting-started' },
+                        { text: 'Community Edition FAQ', link: '/tfmg/users/ce-faq' }
                     ]
                 },
                 {
                     text: 'For Mod Developers',
                     collapsed: true,
                     items: [
-                        { text: 'Depending', link: '/tfmg/mod-developers/depending' }
+                        { text: 'Depending', link: '/tfmg/mod-developers/depending' },
+                        { text: 'Registering Your Objects', link: '/tfmg/mod-developers/registry' }
                     ]
                 },
                 {
@@ -50,40 +53,48 @@ export default {
                             items: [
                                 {
                                     text: 'Recipes',
-                                    link: '/tfmg/pack-developers/kubejs#recipes',
+                                    link: '/tfmg/pack-developers/kubejs/recipes',
                                     collapsed: true,
                                     items: [
-                                        { text: 'Casting', link: '/tfmg/pack-developers/kubejs#casting' },
-                                        { text: 'Coking', link: '/tfmg/pack-developers/kubejs#coking' },
-                                        { text: 'Distillation', link: '/tfmg/pack-developers/kubejs#distillation' },
-                                        { text: 'Industrial Blasting', link: '/tfmg/pack-developers/kubejs#industrial-blasting' },
-                                        { text: 'Polarizing', link: '/tfmg/pack-developers/kubejs#polarizing' },
-                                        { text: 'Winding', link: '/tfmg/pack-developers/kubejs#winding' },
-                                        { text: 'Hot Blasting (aka Air Blasting)', link: '/tfmg/pack-developers/kubejs#hot-blasting-aka-air-blasting' },
-                                        { text: 'Chemical Vat', link: '/tfmg/pack-developers/kubejs#chemical-vat' }
+                                        { text: 'Casting', link: '/tfmg/pack-developers/kubejs/recipes#casting' },
+                                        { text: 'Coking', link: '/tfmg/pack-developers/kubejs/recipes#coking' },
+                                        { text: 'Distillation', link: '/tfmg/pack-developers/kubejs/recipes#distillation' },
+                                        { text: 'Industrial Blasting', link: '/tfmg/pack-developers/kubejs/recipes#industrial-blasting' },
+                                        { text: 'Polarizing', link: '/tfmg/pack-developers/kubejs/recipes#polarizing' },
+                                        { text: 'Winding', link: '/tfmg/pack-developers/kubejs/recipes#winding' },
+                                        { text: 'Hot Blasting (aka Air Blasting)', link: '/tfmg/pack-developers/kubejs/recipes#hot-blasting-aka-air-blasting' },
+                                        { text: 'Chemical Vat', link: '/tfmg/pack-developers/kubejs/recipes#chemical-vat' }
                                     ]
                                 },
                                 {
-                                    text: 'Registration',
-                                    link: '/tfmg/pack-developers/kubejs#registration',
+                                    text: 'Vat Registries',
                                     collapsed: true,
                                     items: [
-                                        { text: 'Vat Operations', link: '/tfmg/pack-developers/kubejs#vat-operations' },
+                                        { text: 'Vat Operations', link: '/tfmg/pack-developers/kubejs/registry/vat/operation' },
                                         {
                                             text: 'Mixer Modes',
-                                            link: '/tfmg/pack-developers/kubejs#mixer-modes',
+                                            link: '/tfmg/pack-developers/kubejs/registry/vat/mixer',
                                             collapsed: true,
                                             items: [
                                                 {
                                                     text: 'Registration',
-                                                    link: '/tfmg/pack-developers/kubejs#registering-mixer-modes'
+                                                    link: '/tfmg/pack-developers/kubejs/registry/vat/mixer'
                                                 },
                                                 {
                                                     text: 'Custom Models',
-                                                    link: '/tfmg/pack-developers/kubejs#custom-mixer-models'
+                                                    link: '/tfmg/pack-developers/kubejs/registry/vat/mixer#custom-models'
                                                 }
                                             ]
                                         },
+                                        { text: 'Electrodes', link: '/tfmg/pack-developers/kubejs/registry/vat/electrode' }
+                                    ]
+                                },
+                                {
+                                    text: 'Fuel Registries',
+                                    collapsed: true,
+                                    items: [
+                                        { text: 'Engine Fuel', link: '/tfmg/pack-developers/kubejs/registry/fuel/engine' },
+                                        { text: 'Flamethrower Fuel', link: '/tfmg/pack-developers/kubejs/registry/fuel/flamethrower' }
                                     ]
                                 }
                             ]
