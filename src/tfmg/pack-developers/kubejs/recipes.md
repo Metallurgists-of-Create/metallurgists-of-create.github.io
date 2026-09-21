@@ -13,90 +13,120 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 # KubeJS Integration
 
 > [!NOTE]
-> The example scripts provided are only here to demonstrate the recipes and are just examples.
-> All recipes not given a processing time will default to `100` ticks!
+> The example scripts below are only meant to demonstrate the recipe syntax. They are not
+> a complete or balanced recipe pack.
+> Any recipe that doesn't specify a processing time defaults to **100 ticks**.
 
-# Recipes
+All recipes are registered inside a `ServerEvents.recipes(event => { ... })` block using
+`event.recipes.tfmg.<recipe_type>(...)`.
+
+## Quick reference
+
+Every recipe type has a fixed "shape". The number of item/fluid inputs and outputs it will accept.
+
+| Recipe type          | Item inputs | Fluid inputs | Item outputs | Fluid outputs |
+|-----------------------|:-----------:|:------------:|:-------------:|:--------------:|
+| `casting`              | 0           | 1            | 1             | 0              |
+| `coking`               | 1           | 0            | 1             | 0–2            |
+| `distillation`         | 0           | 1            | 0             | 1–6            |
+| `industrial_blasting`  | 1–2         | 0            | 0             | 0–3            |
+| `polarizing`           | 1           | 0            | 1             | 0              |
+| `winding`              | 1–2         | 0            | 1             | 0              |
+| `hot_blast`            | 0           | 1–2          | 0             | 1–2            |
+| `vat_machine_recipe`   | 0–4         | 0–4          | 0–4           | 0–4            |
+
+---
+
 ## Casting
-Syntax: `casting(fluidIngredient, itemOutput[], processingTime)`
+**Syntax:** `casting(fluidIngredient, itemOutput[], processingTime)`
 
-Information:
-- Only supports **one** fluid ingredient
-- Item output cannot have more than 3 item outputs
+**Limits**
+- Exactly **1** fluid ingredient
+- Up to **3** item outputs
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.casting("minecraft:lava", "minecraft:sand", 150)
 })
 ```
 
+---
+
 ## Coking
-Syntax: `coking(itemIngredient, [itemOutput | fluidOutput], processingTime)`
+**Syntax:** `coking(itemIngredient, [itemOutput | fluidOutput], processingTime)`
 
-Information:
-- Only supports **one** item ingredient
-- Item output cannot have more than 1 item output
-- Fluid output cannot have more than 2 fluid outputs
+**Limits**
+- Exactly **1** item ingredient
+- Exactly **1** item output
+- Up to **2** fluid outputs
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.coking("minecraft:mud", ["minecraft:dirt", Fluid.water(1000)], 200)
 })
 ```
 
+---
+
 ## Distillation
-Syntax: `distillation(fluidIngredient, fluidOutput[])`
+**Syntax:** `distillation(fluidIngredient, fluidOutput[])`
 
-Information:
-- Only supports **one** fluid ingredient
-- Fluid output cannot have more than 6 fluid outputs
-- The order of fluid outputs goes from bottom to top (from lower to higher index)
+**Limits**
+- Exactly **1** fluid ingredient
+- Up to **6** fluid outputs
+- Output order runs **bottom -> top** (lowest index = bottom of the column)
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.distillation("minecraft:water", ["tfmg:air", "minecraft:lava"])
 })
 ```
 
+---
+
 ## Industrial Blasting
-Syntax: `industrial_blasting(itemIngredient[], fluidOutput[], processingTime)`
+**Syntax:** `industrial_blasting(itemIngredient[], fluidOutput[], processingTime)`
 
-Information:
-- Only supports up to **two** item ingredients
-- Fluid output cannot have more than 3 fluid outputs
+**Limits**
+- Up to **2** item ingredients
+- Up to **3** fluid outputs
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.industrial_blasting(["minecraft:anvil", "minecraft:dirt"], ["minecraft:water"], 200)
 })
 ```
 
+---
+
 ## Polarizing
-Syntax: `polarizing(itemIngredient, itemOutput, energyNeeded)`
+**Syntax:** `polarizing(itemIngredient, itemOutput, energyNeeded)`
 
-Information:
-- Only supports **one** item ingredient
-- Item output cannot have more than 1 item output
+**Limits**
+- Exactly **1** item ingredient
+- Exactly **1** item output
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.polarizing("minecraft:sand", "minecraft:glass", 500)
 })
 ```
 
+---
+
 ## Winding
-Syntax: `winding(itemIngredients[], itemOutput, processingTime)`
+**Syntax:** `winding(itemIngredients[], itemOutput, processingTime)`
 
-Information:
-- Only supports up to **two** item ingredients
-- Item output cannot have more than 1 item output
+**Limits**
+- Up to **2** item ingredients
+- Exactly **1** item output
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.winding(["minecraft:dirt", "minecraft:stick"], "minecraft:sand", 200)
@@ -104,14 +134,16 @@ ServerEvents.recipes(event => {
 })
 ```
 
+---
+
 ## Hot Blasting (aka Air Blasting)
-Syntax: `hot_blast(fluidIngredient[], fluidOutput[], processingTime)`
+**Syntax:** `hot_blast(fluidIngredient[], fluidOutput[], processingTime)`
 
-Information:
-- Only supports up to **two** fluid ingredients
-- Fluid output cannot have more than 2 fluid outputs
+**Limits**
+- Up to **2** fluid ingredients
+- Up to **2** fluid outputs
 
-Example:
+**Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.hot_blast(["minecraft:water", "minecraft:lava"], "tfmg:air", 300)
@@ -119,62 +151,69 @@ ServerEvents.recipes(event => {
 })
 ```
 
+---
+
 ## Chemical Vat
-Syntax:
+**Syntax**
 ```js
 vat_machine_recipe([itemIngredient | fluidIngredient], [itemOutput | fluidOutput], machines[]?, vatTypes[]?, minSize?, processingTime?, heatRequirement?)
 ```
 
-> [!TIP]
-> Read the info below so the syntax is less confusing!
+**Limits**
+- Up to **4** item inputs, up to **4** fluid inputs
+- Up to **4** item outputs, up to **4** fluid outputs
+- At least one input and one output are required
+- Stacked item counts (e.g. `Item.of("some:item", 2)`) are **not allowed**. List the same
+  item multiple times instead: `["some:item", "some:item"]`
 
-Information:
-- There can only be up to **four** item inputs
-  - Stacking items in one entry (e.g., `Item.of("some:item", 2)`) is not allowed. Instead, list each item individually, like: `[js]["some:item", "some:item"]`.
-- There can only be up to **four** fluid inputs
-- Item output cannot have more than 4 item outputs
-- Fluid output cannot have more than 4 fluid outputs
-- Chemical vats can be heated by doing the following:
-  - Heatless recipes do not need this method attached
-  - `.heatLevel(int)`: This can be any positive integer
-- Chemical vats can also be given a pressure requirement:
-  - Pressureless recipes do not need this method attached
-  - `.pressure(int)`: This can be a positive or negative integer
-- Machines to make the results can have:
-  - To see all vat operations (machines), see [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
-  - A graphite electrode can be added by doing `.machines("tfmg:graphite_electrode")`
-    - For **arc blasting**, there would be three graphite electrodes. Example: `.machines("3x tfmg:graphite_electrode")`
-  - A centrifuge can be added by doing `.machines("tfmg:centrifuge")`
-  - Mixing can be added by doing `.machines("tfmg:mixing")`
-  - Electrode can be added by doing `.machines("tfmg:electrode")`
-    - For electrolysis or similar recipes, you would do `.machines("2x tfmg:electrode")`
-- Chemical vat types to make the results can have:
-  - To see all of TFMGs built-in vats, see [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
-  - Steel vat by adding `.allowedVatTypes("tfmg:steel")`
-  - Cast Iron vat by adding `.allowedVatTypes("tfmg:cast_iron")`
-  - Firebrick-lined vat by adding `.allowedVatTypes("tfmg:fireproof")`
-    - Note: you can "mix-and-match" them by doing (for example): `.allowedVatTypes("tfmg:steel", "tfmg:cast_iron")`
-    - Note: By default, when no vat types are present, TFMG will accept any vat type to be used
-- You can set the minimum size of the vat by attaching `.minSize(int)` (replace int with the min size)
-  - Note: If the method is not provided, it will default to a min size of 1
-- To set the processing time, attach the method `.processingTime(int)` (replace the int with the processing time in ticks)
-- The output also supports items with a chance of being made with `Item.of("item here").withChance(chance here)` (Chance is from a 0-1 scale)
+| Method | Purpose |
+|---|---|
+| `.heatLevel(int)` | Any positive integer heat level. |
+| `.pressure(int)` | Pressure requirement: can be positive or negative. Remove for a pressureless recipe. |
+| `.machines(...)` | The machine(s) that must be attached to the vat (see below). |
+| `.allowedVatTypes(...)` | Restricts which vat materials the recipe can run in (see below). |
+| `.minSize(int)` | Minimum vat size. Defaults to `1`. |
+| `.processingTime(int)` | Processing time in ticks. |
 
-> [!NOTE]
-> To add more machines (for example, requiring 3 electrodes), you add more into the "machines" method. (Example: `.machine ("3x tfmg:electrode")`)
+**Machines** 
+See [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
+for the full list. A count prefix repeats a machine (e.g., arc blasting needs three graphite electrodes):
+- `.machines("tfmg:graphite_electrode")` - single graphite electrode
+- `.machines("3x tfmg:graphite_electrode")` - three graphite electrodes (arc blasting)
+- `.machines("tfmg:centrifuge")` - centrifuge
+- `.machines("tfmg:mixing")` - mixing
+- `.machines("tfmg:electrode")` - single electrode
+- `.machines("2x tfmg:electrode")` - two electrodes (e.g. electrolysis)
 
-Example:
+**Vat types**
+See [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
+For the full list:
+- `.allowedVatTypes("tfmg:steel")` - steel vat
+- `.allowedVatTypes("tfmg:cast_iron")` - cast iron vat
+- `.allowedVatTypes("tfmg:fireproof")` - firebrick-lined vat
+- Mix and match: `.allowedVatTypes("tfmg:steel", "tfmg:cast_iron")`
+- If omitted entirely, **any** vat type is accepted
+
+**Chance outputs**
+Item outputs can carry a chance of being produced:
+`Item.of("item here").withChance(chanceHere)`, where chance is on a **0–1** scale.
+
+**Example**
 ```js
 ServerEvents.recipes(event => {
+  // Dirt -> diamond, needs superheating in a firebrick vat
   event.recipes.tfmg.vat_machine_recipe("minecraft:dirt", "minecraft:diamond")
-    .superheated() // Makes the vat require superheating
-    .allowedVatTypes("tfmg:fireproof") // It's super hot, so we should use the firebrick vat for some realism
-    .processingTime(500) // Takes 500 ticks to make dirt to diamonds
+    .heatLevel(10)
+    .allowedVatTypes("tfmg:fireproof")
+    .processingTime(500)
 
-  // This recipe can be used in any vat type
-  event.recipes.tfmg.vat_machine_recipe(["tfmg:sulfuric_acid", "tfmg:hot_air", "minecraft:water"], ["minecraft:lava", "minecraft:mud"])
-    .heated() // Make this recipe use basic heating
-    .machines("tfmg:mixing") // Make it where you have to have a mixer machine on top of the vat
-    .processingTime(250) // Takes 250 ticks to make the ingredients into lava and mud
+  // Sulfuric acid + hot air + water -> lava + mud, needs a mixer, works in any vat type
+  event.recipes.tfmg.vat_machine_recipe(
+    ["tfmg:sulfuric_acid", "tfmg:hot_air", "minecraft:water"],
+    ["minecraft:lava", "minecraft:mud"]
+  )
+    .heatLevel(2)
+    .machines("tfmg:mixing")
+    .processingTime(250)
 })
 ```
