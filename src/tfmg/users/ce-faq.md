@@ -30,6 +30,9 @@ We **safely remap** any old data/items/blocks if they have changed.
 ### Does this work with addons?
 We have native support for Chemica but **most bug fix addons would be incompatible**.
 
+### Can I downgrade to the Official TFMG from the CE?
+NO! The CE safely upgrades old data but there is nothing in place in the official TFMG to downgrade new data. This could cause various issues and possibly world corruption!
+
 # Incompatible Mods
 ### Create: The Factory Must Work!
 Marked incompatible since 1.2.4 due to **overlapping bug fixes** and **intrusive feature tweaking**. The dev decided on their end that it was compatible **before allowing us to review their code**. 
