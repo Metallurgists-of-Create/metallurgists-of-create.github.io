@@ -1,16 +1,16 @@
 ---
 prev:
-    text: Datapack Registries
-    link: /tfmg/pack-developers/datapack
+    text: KubeJS Integration
+    link: /tfmg/pack-developers/kubejs
 
 next: false
 
 title: "Create: TFMG"
-description: KubeJS Integration
+description: KubeJS Recipes
 image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 ---
 
-# KubeJS Integration
+# KubeJS Recipes
 
 > [!NOTE]
 > The example scripts below are only meant to demonstrate the recipe syntax. They are not
