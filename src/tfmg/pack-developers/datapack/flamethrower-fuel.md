@@ -1,6 +1,6 @@
 ---
 prev:
-    text: TFMG
+    text: Datapack Functionality
     link: /tfmg/pack-developers/datapack
 
 next: false
