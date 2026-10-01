@@ -19,6 +19,8 @@ Elements are defined with an id, symbol, and color.<br>
 The color of the element is used for tinting the Element in JEI. It can also be used to change the color of the composition tooltip if the `elementColorForTooltip` config value is `true`<br>
 The symbol of the element is used for the composition tooltip and is never localized.
 
+To register the elements, call `MyElements.init()` inside your plugin's `registerRegistries`
+
 ```java
 public class MyElements {
     public static final Element Nt = create("netherium", "Nt", 0xff333756);
@@ -30,25 +32,6 @@ public class MyElements {
     }
 
     public static void init() {}
-}
-
-// To register to our registries you will likely need to initialize your registry 
-// classes during the RegistryEvent
-@EventBusSubscriber
-public class CommonEvents {
-
-    // Only register everything once.
-    private static boolean didRunRegistration = false;
-
-    @SubscribeEvent
-    public static void onRegister(RegisterEvent event) {
-        if (didRunRegistration) {
-            return;
-        }
-        // Initialize your Elements:
-        MyElements.init();
-        didRunRegistration = true;
-    }
 }
 ```
 
