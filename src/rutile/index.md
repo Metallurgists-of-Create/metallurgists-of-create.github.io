@@ -26,7 +26,7 @@ features:
     linkText: Read More
   - title: For Pack Developers
     details: "How to modify Rutile for your modpack."
-    link: ./pack-developers/kubejs
+    link: ./pack-developers/datapack
     linkText: Read More
 ---
 

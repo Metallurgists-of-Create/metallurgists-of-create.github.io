@@ -15,7 +15,7 @@ image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
 # Creating Your First Material
 
 When creating your material, you can specify its composition. This will be used to display on any of the items related to it.<br>
-The color of the Material is used to tint Fluids.
+The colour of the Material is used to tint Fluids.
 ::: code-group
 ```java [Element]
 public class MyMaterials {

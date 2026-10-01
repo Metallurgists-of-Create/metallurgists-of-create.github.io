@@ -53,4 +53,4 @@ public class CommonEvents {
 ```
 
 ## Materials
-Materials are quite a bit more complicated than Elements. The next section should cover everything you need to know about how to create your own.
+Materials are not yet implemented as of 2.0.3
