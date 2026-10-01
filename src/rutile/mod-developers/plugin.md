@@ -34,6 +34,11 @@ public class YourRutilePlugin implements IRutilePlugin {
     public void collectCompositionManagers(RutileCompositions handler) {
         handler.addManager(CustomCompositionsManager.getInstance());
     }
+
+    @Override
+    public void registerRegistries() {
+        MyElements.init();
+    }
 }
 ```
 
