@@ -29,7 +29,7 @@ Every recipe type has a fixed "shape". The number of item/fluid inputs and outpu
 | `casting`              | 0           | 1            | 1             | 0              |
 | `coking`               | 1           | 0            | 1             | 0–2            |
 | `distillation`         | 0           | 1            | 0             | 1–6            |
-| `industrial_blasting`  | 1–2         | 0            | 0             | 0–3            |
+| `industrial_blasting`  | 1–2         | 0            | 0             | 1–3            |
 | `polarizing`           | 1           | 0            | 1             | 0              |
 | `winding`              | 1–2         | 0            | 1             | 0              |
 | `hot_blast`            | 0           | 1–2          | 0             | 1–2            |
