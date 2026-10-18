@@ -29,4 +29,6 @@ features:
 #    linkText: Read More
 ---
 
-# Chemica {#chemica}
+# About
+
+Chemica is an addon for Create: The Factory Must Grow that aims to implement real-world chemistry and industrial processes in a fun and meaningful way. It brings an array of new materials, items, fluids, gases and recipe trees.
