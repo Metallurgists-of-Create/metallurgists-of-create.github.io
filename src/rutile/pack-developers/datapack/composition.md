@@ -13,6 +13,9 @@ image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
 # Compositions
 
 Compositions are individual JSON files located at `data/<namespace>/rutile/composition/<type>`
+> [!NOTE]
+> It is generally good practice to use your own namespace when creating datapack entries.<br>
+> It avoids polluting the Rutile namespace and makes debugging easier.
 
 Compositions are not a registry and thus, can be reloaded in-game using the `/reload` command.
 

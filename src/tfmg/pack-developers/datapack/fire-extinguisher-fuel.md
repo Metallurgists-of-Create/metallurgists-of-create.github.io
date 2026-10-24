@@ -13,6 +13,9 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 # Fire Extinguisher Fuels
 
 Fire Extinguisher Fuels will be a datapack registry located at `data/<namespace>/tfmg/fuel_type/fire_extinguisher`
+> [!NOTE]
+> It is generally good practice to use your own namespace when creating datapack entries.<br>
+> It avoids polluting the TFMG namespace and makes debugging easier.
 
 > [!IMPORTANT]
 > Fire Extinguisher Fuels are currently **not yet implemented** due to complications with filling the Fire Extinguisher item.

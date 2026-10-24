@@ -13,6 +13,9 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 # Flamethrower Fuels
 
 Flamethrower Fuels are a datapack registry located at `data/<namespace>/tfmg/fuel_type/flamethrower`
+> [!NOTE]
+> It is generally good practice to use your own namespace when creating datapack entries.<br>
+> It avoids polluting the TFMG namespace and makes debugging easier.
 
 This is an example of how to format the file for a Flamethrower Fuel: <br>
 ::: code-group
