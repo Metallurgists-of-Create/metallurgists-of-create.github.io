@@ -146,8 +146,8 @@ ServerEvents.recipes(event => {
 **Example**
 ```js
 ServerEvents.recipes(event => {
-  event.recipes.tfmg.hot_blast(["minecraft:water", "minecraft:lava"], "tfmg:air", 300)
-  event.recipes.tfmg.hot_blast("minecraft:lava", "minecraft:air", 250)
+  event.recipes.tfmg.hot_blast("tfmg:air", ["minecraft:water", "minecraft:lava"], 300)
+  event.recipes.tfmg.hot_blast("minecraft:water", "minecraft:lava", 250)
 })
 ```
 
