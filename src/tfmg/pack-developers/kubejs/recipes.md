@@ -27,13 +27,13 @@ Every recipe type has a fixed "shape". The number of item/fluid inputs and outpu
 | Recipe type          | Item inputs | Fluid inputs | Item outputs | Fluid outputs |
 |-----------------------|:-----------:|:------------:|:-------------:|:--------------:|
 | `casting`              | 0           | 1            | 1             | 0              |
-| `coking`               | 1           | 0            | 1             | 0–2            |
-| `distillation`         | 0           | 1            | 0             | 1–6            |
+| `coking`               | 1           | 0            | 1             | 2              |
+| `distillation`         | 0           | 1            | 0             | 3–6            |
 | `industrial_blasting`  | 1–2         | 0            | 0             | 1–3            |
 | `polarizing`           | 1           | 0            | 1             | 0              |
-| `winding`              | 1–2         | 0            | 1             | 0              |
-| `hot_blast`            | 0           | 1–2          | 0             | 1–2            |
-| `vat_machine_recipe`   | 0–4         | 0–4          | 0–4           | 0–4            |
+| `winding`              | 2           | 0            | 1             | 0              |
+| `hot_blast`            | 0           | 2            | 0             | 2              |
+| `vat`                  | 0–4         | 0–1          | 0–3           | 0–2            |
 
 ---
 
@@ -42,7 +42,8 @@ Every recipe type has a fixed "shape". The number of item/fluid inputs and outpu
 
 **Limits**
 - Exactly **1** fluid ingredient
-- Up to **3** item outputs
+- Exactly **1** item output
+- No fluid outputs
 
 **Example**
 ```js
@@ -59,12 +60,12 @@ ServerEvents.recipes(event => {
 **Limits**
 - Exactly **1** item ingredient
 - Exactly **1** item output
-- Up to **2** fluid outputs
+- Exactly **2** fluid outputs
 
 **Example**
 ```js
 ServerEvents.recipes(event => {
-  event.recipes.tfmg.coking("minecraft:mud", ["minecraft:dirt", Fluid.water(1000)], 200)
+  event.recipes.tfmg.coking("minecraft:mud", ["minecraft:dirt", Fluid.water(1000), Fluid.of("minecraft:lava", 1000)], 200)
 })
 ```
 
@@ -75,13 +76,13 @@ ServerEvents.recipes(event => {
 
 **Limits**
 - Exactly **1** fluid ingredient
-- Up to **6** fluid outputs
+- Between **3** and **6** fluid outputs
 - Output order runs **bottom -> top** (lowest index = bottom of the column)
 
 **Example**
 ```js
 ServerEvents.recipes(event => {
-  event.recipes.tfmg.distillation("minecraft:water", ["tfmg:air", "minecraft:lava"])
+  event.recipes.tfmg.distillation("minecraft:water", ["tfmg:air", "minecraft:lava", "minecraft:water"])
 })
 ```
 
@@ -91,8 +92,9 @@ ServerEvents.recipes(event => {
 **Syntax:** `industrial_blasting(itemIngredient[], fluidOutput[], processingTime)`
 
 **Limits**
-- Up to **2** item ingredients
-- Up to **3** fluid outputs
+- Between **1** and **2** item ingredients
+- Between **1** and **3** fluid outputs
+- No item outputs
 
 **Example**
 ```js
@@ -109,6 +111,7 @@ ServerEvents.recipes(event => {
 **Limits**
 - Exactly **1** item ingredient
 - Exactly **1** item output
+- No fluid inputs or outputs
 
 **Example**
 ```js
@@ -123,14 +126,15 @@ ServerEvents.recipes(event => {
 **Syntax:** `winding(itemIngredients[], itemOutput, processingTime)`
 
 **Limits**
-- Up to **2** item ingredients
+- Exactly **2** item ingredients
 - Exactly **1** item output
+- No fluid inputs or outputs
 
 **Example**
 ```js
 ServerEvents.recipes(event => {
   event.recipes.tfmg.winding(["minecraft:dirt", "minecraft:stick"], "minecraft:sand", 200)
-  event.recipes.tfmg.winding("minecraft:glass", "minecraft:sand", 150)
+  event.recipes.tfmg.winding(["minecraft:glass", "minecraft:stick"], "minecraft:sand", 150)
 })
 ```
 
@@ -140,14 +144,15 @@ ServerEvents.recipes(event => {
 **Syntax:** `hot_blast(fluidIngredient[], fluidOutput[], processingTime)`
 
 **Limits**
-- Up to **2** fluid ingredients
-- Up to **2** fluid outputs
+- Exactly **2** fluid ingredients
+- Exactly **2** fluid outputs
+- No item inputs or outputs
 
 **Example**
 ```js
 ServerEvents.recipes(event => {
-  event.recipes.tfmg.hot_blast("tfmg:air", ["minecraft:water", "minecraft:lava"], 300)
-  event.recipes.tfmg.hot_blast("minecraft:water", "minecraft:lava", 250)
+  event.recipes.tfmg.hot_blast(["tfmg:air", "minecraft:water"], ["minecraft:water", "minecraft:lava"], 300)
+  event.recipes.tfmg.hot_blast(["minecraft:water", "minecraft:lava"], ["tfmg:air", "minecraft:lava"], 250)
 })
 ```
 
@@ -160,8 +165,8 @@ vat_machine_recipe([itemIngredient | fluidIngredient], [itemOutput | fluidOutput
 ```
 
 **Limits**
-- Up to **4** item inputs, up to **4** fluid inputs
-- Up to **4** item outputs, up to **4** fluid outputs
+- Up to **4** item inputs, up to **1** fluid input
+- Up to **3** item outputs, up to **2** fluid outputs
 - At least one input and one output are required
 - Stacked item counts (e.g. `Item.of("some:item", 2)`) are **not allowed**. List the same
   item multiple times instead: `["some:item", "some:item"]`
@@ -207,10 +212,10 @@ ServerEvents.recipes(event => {
     .allowedVatTypes("tfmg:fireproof")
     .processingTime(500)
 
-  // Sulfuric acid + hot air + water -> lava + mud, needs a mixer, works in any vat type
+  // Sulfuric acid + mud -> lava + dirt, needs a mixer, works in any vat type
   event.recipes.tfmg.vat_machine_recipe(
-    ["tfmg:sulfuric_acid", "tfmg:hot_air", "minecraft:water"],
-    ["minecraft:lava", "minecraft:mud"]
+    ["tfmg:sulfuric_acid", "minecraft:mud"],
+    ["minecraft:lava", "minecraft:dirt"]
   )
     .heatLevel(2)
     .machines("tfmg:mixing")
