@@ -29,6 +29,10 @@ export default defineConfig({
         provider: "local"
     },
 
+    editLink: {
+      pattern: "https://github.com/Metallurgists-of-Create/metallurgists-of-create.github.io/blob/main/src/:path"
+    },
+
     nav: [
       { text: 'Home', link: '/' }
     ],
