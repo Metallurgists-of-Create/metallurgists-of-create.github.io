@@ -146,7 +146,7 @@ ServerEvents.recipes(event => {
 **Limits**
 - Exactly **2** fluid ingredients
   - The first entry is the "Input Tank" (air), piped into a side
-  - The second entry is the "Fuel Tank", (fuel) piped into the bottom
+  - The second entry is the "Fuel Tank" (fuel), piped into the bottom
 - Exactly **2** fluid outputs
   - The first entry is the "Output Tank 1" (product), piped out of the top or bottom
   - The second entry is the "Output Tank 2" (byproduct), piped out of a side
