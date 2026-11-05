@@ -145,14 +145,18 @@ ServerEvents.recipes(event => {
 
 **Limits**
 - Exactly **2** fluid ingredients
+  - The first entry is the "Input Tank" (air), piped into a side
+  - The second entry is the "Fuel Tank" (fuel), piped into the bottom
 - Exactly **2** fluid outputs
+  - The first entry is the "Output Tank 1" (product), piped out of the top or bottom
+  - The second entry is the "Output Tank 2" (byproduct), piped out of a side
 - No item inputs or outputs
 
 **Example**
 ```js
 ServerEvents.recipes(event => {
-  event.recipes.tfmg.hot_blast(["tfmg:air", "minecraft:water"], ["minecraft:water", "minecraft:lava"], 300)
-  event.recipes.tfmg.hot_blast(["minecraft:water", "minecraft:lava"], ["tfmg:air", "minecraft:lava"], 250)
+  event.recipes.tfmg.hot_blast([Fluid.of("tfmg:air", 50), Fluid.of("minecraft:lava", 10)], [Fluid.of("tfmg:hot_air", 50), Fluid.of("tfmg:carbon_dioxide", 50)], 200)
+  event.recipes.tfmg.hot_blast(["minecraft:water", "minecraft:lava"], ["tfmg:air", "minecraft:lava"], 200)
 })
 ```
 
