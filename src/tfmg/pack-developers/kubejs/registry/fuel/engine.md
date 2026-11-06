@@ -45,8 +45,5 @@ TFMGEvents.engineFuel(event => {
 })
 ```
 
-## Modifing Fuels
-To be implemented
-
-## Removing Fuels
+## Modifying Fuels
 To be implemented
