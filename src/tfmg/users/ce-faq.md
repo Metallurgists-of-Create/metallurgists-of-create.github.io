@@ -34,10 +34,6 @@ We have native support for Chemica but **most bug fix addons would be incompatib
 NO! The CE safely upgrades old data but there is nothing in place in the official TFMG to downgrade new data. This could cause various issues and possibly world corruption!
 
 # Incompatible Mods
-### Create: The Factory Must Work!
-Marked incompatible since 1.2.4 due to **overlapping bug fixes** and **intrusive feature tweaking**. The dev decided on their end that it was compatible **before allowing us to review their code**. 
-It is still incompatible in our eyes, and the dev needs to **address concerns raised in our issue** before we reconsider the status.
-
 ### TFMG: bugs fixes
 Marked incompatible since 1.2.5 due to **overlapping bug fixes**. Status likely won't be changed.
 
@@ -58,3 +54,14 @@ Marked incompatible since 1.2.5 due to **overlapping bug fixes**. Status likely 
 
 ### TFMG Electricity Performance Patch
 Marked incompatible since 1.3.1 due to **overlapping bug fixes**. Status likely won't be changed.
+
+### The DanielBasov Addons
+This user has presumably AI Generated a large amount of "Bug Fix" addons that are obsolete with the Community Edition or inject unsupported data into block entities.
+- `TFMG Tank Fix`: To be marked incompatible in 1.4.0. It injects boiler data into tanks which cannot be boilers, potentially breaking some features.
+- `TFMG Vat Processing Fix`: To be marked incompatible in 1.4.0. It attempts to modify recipe processing in an older version of the Vat block entity which has been updated.
+- `TFMG Mixer Blade Fix`: To be marked incompatible in 1.4.0. It is not needed as Industrial Mixers now properly store mixer items.
+- `TFMG Engine Drops Fix`: To be marked incompatible in 1.4.0. It is not needed as Engines now properly drop all assembly components.
+- `TFMG Casting Capacity`: To be marked incompatible in 1.4.0. It is not needed as Casting Basins can reasonably produce all recipes.
+- `TFMG Casting Fluid Fix`: To be marked incompatible in 1.4.0. It is not needed as Casting Basins now drain the appropriate amount.
+- `TFMG Winding Fix`: To be marked incompatible in 1.4.0. It is not needed as Winding Machines now check for the component before retrieving it.
+Due to the possible AI nature of these addons, alongside the future incompatibilities these will cause, the status will not be changed.
