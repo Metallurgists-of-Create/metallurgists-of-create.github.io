@@ -165,7 +165,7 @@ ServerEvents.recipes(event => {
 ## Chemical Vat
 **Syntax**
 ```js
-vat_machine_recipe([itemIngredient | fluidIngredient], [itemOutput | fluidOutput], machines[]?, vatTypes[]?, minSize?, processingTime?, heatRequirement?)
+vat([itemIngredient | fluidIngredient], [itemOutput | fluidOutput], machines[]?, vatTypes[]?, minSize?, processingTime?, heatRequirement?)
 ```
 
 **Limits**
@@ -211,13 +211,13 @@ Item outputs can carry a chance of being produced:
 ```js
 ServerEvents.recipes(event => {
   // Dirt -> diamond, needs superheating in a firebrick vat
-  event.recipes.tfmg.vat_machine_recipe("minecraft:dirt", "minecraft:diamond")
+  event.recipes.tfmg.vat("minecraft:dirt", "minecraft:diamond")
     .heatLevel(10)
     .allowedVatTypes("tfmg:fireproof")
     .processingTime(500)
 
   // Sulfuric acid + mud -> lava + dirt, needs a mixer, works in any vat type
-  event.recipes.tfmg.vat_machine_recipe(
+  event.recipes.tfmg.vat(
     ["tfmg:sulfuric_acid", "minecraft:mud"],
     ["minecraft:lava", "minecraft:dirt"]
   )
