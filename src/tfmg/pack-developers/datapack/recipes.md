@@ -12,9 +12,6 @@ image: https://metallurgists-of-create.github.io/assets/tfmg-ce-icon-large.webp
 
 # Datapack Recipes
 
-> [!WARNING]
-> This page is under construction!
-
 > [!NOTE]
 > It is generally good practice to use your own namespace when creating datapack entries.<br>
 > It avoids polluting the TFMG namespace and makes debugging easier.
