@@ -33,6 +33,44 @@ export default {
                             collapsed: true,
                             items: [
                                 {
+                                    text: 'Recipes',
+                                    link: '/tfmg/pack-developers/datapack/recipes'
+                                },
+                                {
+                                    text: 'Ingredients Guide',
+                                    link: '/tfmg/pack-developers/datapack/ingredients',
+                                    collapsed: true,
+                                    items: [
+                                        {
+                                            text: 'Items',
+                                            link: '/tfmg/pack-developers/datapack/ingredients#items',
+                                            collapsed: true,
+                                            items: [
+                                                { text: 'Unspecified', link: '/tfmg/pack-developers/datapack/ingredients#unspecified' },
+                                                { text: 'Block Tag', link: '/tfmg/pack-developers/datapack/ingredients#block-tag' },
+                                                { text: 'Compound', link: '/tfmg/pack-developers/datapack/ingredients#compound' },
+                                                { text: 'Components', link: '/tfmg/pack-developers/datapack/ingredients#components' },
+                                                { text: 'Difference', link: '/tfmg/pack-developers/datapack/ingredients#difference' },
+                                                { text: 'Intersection', link: '/tfmg/pack-developers/datapack/ingredients#intersection' }
+                                            ]
+                                        },
+                                        {
+                                            text: 'Fluids',
+                                            link: '/tfmg/pack-developers/datapack/ingredients#fluids',
+                                            collapsed: true,
+                                            items: [
+                                                { text: 'Single', link: '/tfmg/pack-developers/datapack/ingredients#single' },
+                                                { text: 'Tag', link: '/tfmg/pack-developers/datapack/ingredients#tag' },
+                                                { text: 'Empty', link: '/tfmg/pack-developers/datapack/ingredients#empty' },
+                                                { text: 'Compound', link: '/tfmg/pack-developers/datapack/ingredients#compound-1' },
+                                                { text: 'Components', link: '/tfmg/pack-developers/datapack/ingredients#components-1' },
+                                                { text: 'Difference', link: '/tfmg/pack-developers/datapack/ingredients#difference-1' },
+                                                { text: 'Intersection', link: '/tfmg/pack-developers/datapack/ingredients#intersection-1' }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
                                     text: 'Engine Fuels',
                                     link: '/tfmg/pack-developers/datapack/engine-fuel'
                                 },

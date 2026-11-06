@@ -22,6 +22,9 @@ For KubeJS, see [KubeJS Integration](/tfmg/pack-developers/kubejs)
 
 The Community Edition of TFMG adds various options for customisation through datapacks.
 
+## Entries
+- [Recipes](/tfmg/pack-developers/datapack/recipes)
+
 ## Fuel Types
 - [Engine Fuels](/tfmg/pack-developers/datapack/engine-fuel)
 - [Flamethrower Fuels](/tfmg/pack-developers/datapack/flamethrower-fuel)
