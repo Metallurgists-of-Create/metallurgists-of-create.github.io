@@ -34,7 +34,18 @@ export default {
                             items: [
                                 {
                                     text: 'Recipes',
-                                    link: '/tfmg/pack-developers/datapack/recipes'
+                                    link: '/tfmg/pack-developers/datapack/recipes',
+                                    collapsed: true,
+                                    items: [
+                                        { text: 'Casting', link: '/tfmg/pack-developers/datapack/recipes#casting' },
+                                        { text: 'Coking', link: '/tfmg/pack-developers/datapack/recipes#coking' },
+                                        { text: 'Distillation', link: '/tfmg/pack-developers/datapack/recipes#distillation' },
+                                        { text: 'Industrial Blasting', link: '/tfmg/pack-developers/datapack/recipes#industrial-blasting' },
+                                        { text: 'Polarizing', link: '/tfmg/pack-developers/datapack/recipes#polarizing' },
+                                        { text: 'Winding', link: '/tfmg/pack-developers/datapack/recipes#winding' },
+                                        { text: 'Hot Blasting (aka Air Blasting)', link: '/tfmg/pack-developers/datapack/recipes#hot-blasting-aka-air-blasting' },
+                                        { text: 'Chemical Vat', link: '/tfmg/pack-developers/datapack/recipes#chemical-vat' }
+                                    ]
                                 },
                                 {
                                     text: 'Ingredients Guide',

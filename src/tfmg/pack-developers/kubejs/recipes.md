@@ -184,17 +184,17 @@ vat([itemIngredient | fluidIngredient], [itemOutput | fluidOutput], machines[]?,
 | `.minSize(int)` | Minimum vat size. Defaults to `1`. |
 | `.processingTime(int)` | Processing time in ticks. |
 
-**Machines** 
+**Machines**<br>
 See [TFMGVatOperations](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatOperations.java)
 for the full list. A count prefix repeats a machine (e.g., arc blasting needs three graphite electrodes):
 - `.machines("tfmg:graphite_electrode")` - single graphite electrode
 - `.machines("3x tfmg:graphite_electrode")` - three graphite electrodes (arc blasting)
 - `.machines("tfmg:centrifuge")` - centrifuge
-- `.machines("tfmg:mixing")` - mixing
+- `.machines("tfmg:mixer")` - mixer
 - `.machines("tfmg:electrode")` - single electrode
 - `.machines("2x tfmg:electrode")` - two electrodes (e.g. electrolysis)
 
-**Vat types**
+**Vat types**<br>
 See [TFMGVatTypes](https://github.com/Metallurgists-of-Create/Create-TFMG-CE/blob/1.21.1/src/main/java/com/drmangotea/tfmg/registry/TFMGVatTypes.java)
 For the full list:
 - `.allowedVatTypes("tfmg:steel")` - steel vat
