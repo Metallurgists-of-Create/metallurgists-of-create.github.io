@@ -27,8 +27,5 @@ TFMGEvents.flamethrowerFuel(event => {
 })
 ```
 
-## Modifing Fuels
-to be implemented
-
-## Removing Fuels
+## Modifying Fuels
 to be implemented
