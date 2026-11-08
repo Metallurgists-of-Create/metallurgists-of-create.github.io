@@ -40,6 +40,7 @@ To get to know ingredients, see [Ingredients Guide](/tfmg/pack-developers/datapa
 **Limits**
 - Exactly **1** fluid ingredient
 - Exactly **1** item output
+- No item inputs
 - No fluid outputs
 
 **Example**
@@ -70,6 +71,7 @@ To get to know ingredients, see [Ingredients Guide](/tfmg/pack-developers/datapa
 - Exactly **1** item ingredient
 - Exactly **1** item output
 - Exactly **2** fluid outputs
+- No fluid inputs
 
 **Example**
 ```json
@@ -104,7 +106,11 @@ To get to know ingredients, see [Ingredients Guide](/tfmg/pack-developers/datapa
 **Limits**
 - Exactly **1** fluid ingredient
 - Between **3** and **6** fluid outputs
-- Output order runs **bottom → top** (lowest index = bottom of the column)
+- No item inputs or outputs
+
+> [!Important]
+> Output order runs **bottom → top**<br>
+> The lowest index is the bottom of the column.
 
 **Example**
 ```json
@@ -258,12 +264,15 @@ To get to know ingredients, see [Ingredients Guide](/tfmg/pack-developers/datapa
 
 **Limits**
 - Exactly **2** fluid ingredients
-    - The first entry is the "Input Tank" (air), piped into a side
-    - The second entry is the "Fuel Tank" (fuel), piped into the bottom
 - Exactly **2** fluid outputs
-    - The first entry is the "Output Tank 1" (product), piped out of the top
-    - The second entry is the "Output Tank 2" (byproduct), piped out of a side
 - No item inputs or outputs
+
+> [!Important]
+> The Inputs and Results must be correctly ordered for this recipe.<br>
+> - The first input is the "Input Tank" (air), piped into a side.
+> - The second input is the "Fuel Tank" (fuel), piped into the bottom.
+> - The first result is the "Output Tank 1" (product), piped out of the top.
+> - The second result is the "Output Tank 2" (byproduct), piped out of a side.
 
 **Example**
 ```json
@@ -300,8 +309,9 @@ Vat recipes are more complex than the previous types due to the many different r
 **Limits**
 - Up to **4** item inputs, up to **1** fluid input
 - Up to **3** item outputs, up to **2** fluid outputs
-- At least one input and one output are required
 
+> [!Important]
+> At least one input and one output are required
 
 | Field | Purpose |
 |---|---|
