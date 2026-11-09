@@ -14,4 +14,5 @@ image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
 
 # KubeJS Integration
 
-Currently, Rutile does not support KubeJS, but it will in the near future.
+Rutile does support KubeJS, but there is currently no documentation. 
+Documentation is currently being worked on.
