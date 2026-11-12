@@ -12,7 +12,7 @@ image: /assets/empty-icon-large.webp
 
 # Our Stance on AI
 
-The Metallurgists of Create are strongly against the usage of Generative AI in creative spaces and will never use it to develop any part of our projects, be that code, text or assets. 
+The Metallurgists are strongly against the usage of Generative AI in creative spaces and will never use it to develop any part of our projects, be that code, text or assets. 
 We consider our projects works of art and have precautions in place to prevent people utilising our work to train AI models.
 
 ## Our Licence
