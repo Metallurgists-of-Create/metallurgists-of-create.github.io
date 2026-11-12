@@ -5,7 +5,7 @@ layout: home
 lastUpdated: false
 
 hero:
-  name: "Metallurgists of Create"
+  name: "The Metallurgists"
   tagline: "Bringing realism to Minecraft. One mod at a time."
   image:
     src: /assets/rutile-icon-large.webp
