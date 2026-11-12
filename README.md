@@ -1,6 +1,6 @@
-# Metallurgists of Create Site
+# The Metallurgists Site
 
-<https://metallurgists-of-create.github.io/>
+<https://the-metallurgists.github.io/>
 
 ## Development
 
