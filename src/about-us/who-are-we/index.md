@@ -6,13 +6,13 @@ prev:
 next: false
 
 title: "Who Are We?"
-description: "Who are the Metallurgists of Create?"
+description: "Who are The Metallurgists?"
 image: /assets/empty-icon-large.webp
 ---
 
 # Who Are We?
 
-The Metallurgists of Create are a growing team of developers, artists, and planners who aim to create mods that bring realism to Minecraft in a player-friendly way.
+The Metallurgists are a growing team of developers, artists, and planners who aim to create mods that bring realism to Minecraft in a player-friendly way.
 
 ## Our Projects
 - Our main project is **Metallurgica**, an in-dev addon for **Create: TFMG 1.21.1** that aims to add realistic ore and mineral processing utilising semi-accurate geology and chemistry.
