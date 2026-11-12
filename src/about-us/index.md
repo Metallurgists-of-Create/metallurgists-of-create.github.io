@@ -17,7 +17,7 @@ hero:
 
 features:
   - title: Who Are We?
-    details: "Who are the Metallurgists of Create?"
+    details: "Who are The Metallurgists?"
     link: ./who-are-we
     linkText: Read More
   - title: AI
