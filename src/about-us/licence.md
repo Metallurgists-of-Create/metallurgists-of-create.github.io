@@ -46,7 +46,7 @@ In addition, the following restrictions apply:
 
 5. Permitted distribution. The Software, in whole or in part and in original or modified form,
    may be distributed only:
-   (a) through the official Maven repository of Metallurgists of Create;
+   (a) through The Metallurgists' official Maven repository;
    (b) through CurseForge (curseforge.com) and Modrinth (modrinth.com); and
    (c) as part of modpacks, provided the Software is included without removing its copyright notice or this licence.
    No person or organisation may upload, host, mirror, or otherwise distribute the Software or any
