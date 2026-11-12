@@ -5,7 +5,7 @@ lastUpdated: false
 
 title: Rutile
 description: API for easy material registry using flags.
-image: https://metallurgists-of-create.github.io/assets/rutile-icon-large.webp
+image: https://the-metallurgists.github.io/assets/rutile-icon-large.webp
 
 hero:
   name: "Rutile"
