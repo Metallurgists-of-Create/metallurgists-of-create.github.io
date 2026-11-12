@@ -13,7 +13,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   cleanUrls: true,
 
-  title: "Metallurgists of Create",
+  title: "The Metallurgists",
   description: "Bringing realism to Minecraft. One mod at a time.",
 
   head: [["link", { rel: "icon", href: "/assets/rutile-icon-small.webp" }]],
@@ -30,7 +30,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: "https://github.com/Metallurgists-of-Create/metallurgists-of-create.github.io/blob/main/src/:path"
+      pattern: "https://github.com/The-Metallurgists/the-metallurgists.github.io/blob/main/src/:path"
     },
 
     nav: [
@@ -45,12 +45,12 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Metallurgists-of-Create' }
+      { icon: 'github', link: 'https://github.com/The-Metallurgists' }
     ]
   },
 
   sitemap: {
-    hostname: 'https://metallurgists-of-create.github.io'
+    hostname: 'https://the-metallurgists.github.io'
   },
 
   async transformHead(context) {
