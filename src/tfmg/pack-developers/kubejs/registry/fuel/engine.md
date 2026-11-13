@@ -36,6 +36,8 @@ TFMGEvents.engineFuel(event => {
         // ["magic_mod:rainbow_fluid", "some_mod:evil_fluid"]
         // #namespace:special_fuel
         .fluids("minecraft:water")
+        // Instead of carbon dioxide as an exhaust, other fluids can be used
+        .exhaust("minecraft:lava")
         // Speed modifier
         .speed(2.1)
         // Efficiency modifier (affects fuel consumption)
